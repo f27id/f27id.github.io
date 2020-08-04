@@ -1,0 +1,64 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="./assets/quiz.css">
+<script src="./prettyprint/run_prettify.js"></script>
+
+</head>
+<body>
+
+<h1>Revision Quiz</h1>
+
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+
+<script>
+  const myQuestions = [
+    {
+      question: "How much is the coursework worth?",
+      answers: {
+        a: "40%",
+        b: "50%",
+        c: "60%"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "How much is the final exam worth?",
+      answers: {
+        a: "10%",
+        b: "100%",
+		c: "40%",
+        d: "60%"
+      },
+      correctAnswer: "d"
+    },
+    {
+      question: "How many courseworks projects?:",
+      answers: {
+        a: "1 = 40%",
+        b: "2 = 20% each",
+		c: "4 = 10% each",
+      },
+      correctAnswer: "b"
+    }
+  ];
+</script>
+<script src="./assets/quiz.js"></script>
+
+<div class="hidden-mobile">
+    <div style="display: block; position: absolute; bottom: 5px; left: 5px; margin-left: 0px; z-index: 20; text-align: left;">
+        <a href="https://f27id.github.io" class="twitter-follow-button" data-show-count="false"><img src="../lectures/images/webhome.png" width="8%"></a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
