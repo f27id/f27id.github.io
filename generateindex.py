@@ -8,6 +8,8 @@ Naming example:
 Lecture 00 - Introduction.html
 Notes 00 - Introduction.html
 
+Example:
+\> python generateindex.py > index.html
 
 """
 
@@ -20,7 +22,8 @@ titles=["Introduction",
 		"Task Analysis",
 		"Users and User Requirements",
 		"Design Thinking",
-		"Human AI Interaction"];
+		"Human AI Interaction",
+		"Revision" ];
 		
 
 txt = ""
@@ -62,10 +65,13 @@ for i in range( 0, len(titles) + 1 ): # + 1 is due to week 6 skip
 	wkno += 1
 	
 	# hack - nothing happens in week 6
-	if ( i== 6 ):
+	if ( wkno == 6 ):
 		txt += """
-		<tr></tr>
-		"""
+		<tr>
+		  <td>%d      		</td>
+          <td align="center" colspan="7"> --- </td>
+		</tr>
+		""" % (wkno)
 		continue
 		
 	
