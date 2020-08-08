@@ -1602,6 +1602,7 @@ Functional
 				progress: true,
 				center: true,
 				hash: true,
+				slideNumber: false,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
@@ -1612,9 +1613,31 @@ Functional
 					{ src: 'plugin/highlight/highlight.js', async: true },
 					{ src: 'plugin/search/search.js', async: true },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/tts/tts_min_reveal.js', async: false}
+				]});
+				
+				
+			Reveal.configure({
+			  keyboard: {
+				81: function() {tts.Synth.cancel()}, // press q to cancel speaking and clear speech queue.
+				  84: function() {tts.ToggleSpeech()}  // press t to toggle speech on/off
+
+			  }
 			});
+
+function togglesound()
+{
+	tts.On = !tts.On;
+	if ( tts.On )
+	{
+		tts.Read();
+	}
+	else 
+	{
+		tts.Synth.cancel()
+	}	
+}
 
 		</script>
 		
@@ -1624,18 +1647,20 @@ Add some helper buttons to the bottom left
 * home (back to the main page)
 * print button (puts the slides in a printable format)
 -->
-		
-<div class="hidden-mobile">
-    <div style="display: block; position: absolute; bottom: 5px; left: 5px; margin-left: 0px; z-index: 20;">
-        <a href="https://f27id.github.io"><img src="./images/webhome.png" width="8%"></a>
-    </div>
+	
+<div style="display: block; position: absolute; bottom: 5px; left: 5px; margin-left: 0px; z-index: 20;">
+	<a href="https://f27id.github.io"><img src="./images/webhome.png" width="8%"></a>
 </div>
 
-<div class="hidden-mobile">
-    <div style="display: block; position: absolute; bottom: 3px; left: 50px; margin-left: 0px; z-index: 20; text-align: left;">
-		<a href="?print-pdf" onclick="window.open(this.href, 'print window', 'width=1000,height=550').print(); return false"><img src="./images/webprint.png" width="7.5%"></a>
-    </div>
+<div style="display: block; position: absolute; bottom: 3px; left: 50px; margin-left: 0px; z-index: 20; text-align: left;">
+	<a href="?print-pdf" onclick="window.open(this.href, 'print window', 'width=1000,height=550').print(); return false"><img src="./images/webprint.png" width="7.5%"></a>
 </div>
+
+<!--
+<div style="display: block; position: absolute; bottom: 3px; left: 95px; margin-left: 0px; z-index: 20; text-align: left;">
+	<a onclick="togglesound();"><img src="./images/webtalk.png" width="7.5%"></a>
+</div>
+-->
 	
 	
 
