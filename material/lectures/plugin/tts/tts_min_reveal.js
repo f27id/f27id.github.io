@@ -25,7 +25,9 @@ tts.ReadText = function(txt, last=false){
 	// Use tts to read text. A new speech synthesis utterance instance is required for each tts output for FF.
 	// Chrome lets you redefine the SpeechSynthesizerUtterance.txt property-
 	// as needed without having to create a new object every time you want speech.
-	let ttsSpeechChunk = new SpeechSynthesisUtterance(txt);
+	let txt2 = txt.split(';').join('  ');
+	
+	let ttsSpeechChunk = new SpeechSynthesisUtterance(txt2);
 	 ttsSpeechChunk.voice = tts.Voices[tts.DvIndex]; //use default voice -- some voice must be assigned for FF to work.
      ttsSpeechChunk.rate = tts.DvRate; 
      tts.Synth.speak(ttsSpeechChunk);	 
@@ -92,7 +94,7 @@ tts.ReadVisElmts = function(){
 	else 
 	{
 		//console.log('setting timeout for the next slide');
-		setTimeout(function(){ Reveal.next(); }, 3000);
+		setTimeout(function(){ Reveal.next(); }, 7000);
 	}
 
 	
@@ -114,7 +116,7 @@ tts.ReadAnyElmts = function(){
 			let prs = xElmts[k].textContent.split(';');
 			for (let bb=0; bb<prs.length; bb++)
 			{
-				txtToRead.push( prs[bb] + ' ' );
+				txtToRead.push( prs[bb] + '  ' );
 			}
 		}
 	}
@@ -142,7 +144,7 @@ tts.ReadAnyElmts = function(){
 	else 
 	{
 		console.log('setting timeout for the next slide');
-		setTimeout(function(){ Reveal.next(); }, 3000);
+		setTimeout(function(){ Reveal.next(); }, 5000);
 	}
 	
 	
