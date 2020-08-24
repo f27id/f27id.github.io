@@ -14,13 +14,14 @@ Example:
 """
 
 titles=["Introduction",
+		'Interaction Design',
         "Problem Space",
 		"Literature Review",
 		"Prototyping",
-		"Introduction to Justinmind",
-		"Prototyping with Justinmind",
+		"Prototyping Tools",
 		"Task Analysis",
-		"Users and User Requirements",
+		"Usability Part 1",
+		"Usability Part 2",
 		"Design Thinking",
 		"Human AI Interaction",
 		"Revision" ];
