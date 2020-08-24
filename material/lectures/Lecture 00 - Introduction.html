@@ -63,7 +63,7 @@ Introduction to Interactive Design for 2020
 				<section data-background-video="./images/introvideo.mp4">
 				
 <aside class='notes'>
-; ; ; ; ; ; ; ; 
+
 </aside>
 				
 				</section>
@@ -96,9 +96,9 @@ We hope you enjoy this course.
 					</ul>
 					</div>
 <aside class='notes'>
-Today's lecture will explain what this course is about and what to expect. 
+Today's lecture will explain what this course is about and what to expect. [pause]
 For example, the syllabus, teaching schedule and how you'll be assessed. 
-We'll also provide some simple examples on interaction design to help you see why the topic is so important (that is good and bad examples).
+We'll also provide some simple examples on interactive design to help you see why the topic is so important (through good and bad examples in context).
 We'll finish up the lecture with a set of recommended reading and closing discussions of the material.
 </aside>
 				</section>
@@ -987,15 +987,7 @@ Can you think of 2 **products/software/interface-system** you used/use/experienc
 
 function togglesound()
 {
-	tts.On = !tts.On;
-	if ( tts.On )
-	{
-		tts.Read();
-	}
-	else 
-	{
-		tts.Synth.cancel()
-	}	
+	tts.ToggleSpeech();	
 }
 
 		</script>

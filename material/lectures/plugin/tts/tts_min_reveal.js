@@ -2,6 +2,19 @@ var tts = {};
 tts.Synth = window.speechSynthesis;
 tts.Voices = [];
 tts.Voices = tts.Synth.getVoices(); // get a list of available voices.
+
+
+
+/*
+for (var ix = 0; ix < tts.Voices.length; ix++) { 
+//find the default voice-- needed for FF, in Chrome voices[0] works as the default.
+	if (tts.Voices[ix].default) {
+		tts.DvIndex = ix;
+	}
+};
+*/
+
+
 tts.DvIndex = 0; //Used to help identify the default tts voice for Chrome or FF on the users platform.
 tts.DvRate = 0.85; // used to set speech rate between 0 and 2, 1 = 'normal'- there are other seemingly optional parameters like pitch, language, volume.
 tts.On = false; //Set to false to prevent tts production.
@@ -10,28 +23,172 @@ tts.readPage  = false;
 tts.readFrags = false; //Set to true to read fragment text content as it appears.
 tts.readNotes = true; //set to true to read text content of any <aside class="notes">text content</aside> tag in a slide section
 
+// fix to get the default voice
+setTimeout(function(){
+	tts.Voices = tts.Synth.getVoices();
+	console.log('Available voices:')
+	for (var ix = 0; ix < tts.Voices.length; ix++)
+	{
+		let voice = tts.Voices[ix];
+		console.log( '  voice:[' + voice.name + ']' );
+		
+		if ( voice.default )
+		{
+			tts.DvIndex = ix;
+			console.log( '>>> default voice: ' + voice.name );
+		}
+		// *** hack - force voice ***
+		
+		if ( voice.name == 'Google UK English Female' )
+		{
+			tts.DvIndex = ix;
+		}
+		
+	}
+	
+}, 500 );
+
+
+
 /*
 https://stackoverflow.com/questions/21947730/chrome-speech-synthesis-with-longer-texts
 */
-var timeoutResumeInfinity;
-function resumeInfinity() {
+var timeoutResumeInfinity = -1;
+function resumeInfinity() 
+{
     window.speechSynthesis.resume();
     timeoutResumeInfinity = setTimeout(resumeInfinity, 1000);
 }
 
-tts.ReadText = function(txt, last=false){
+var timeoutQueue = -1;
+var ttsQueue = [];
+
+tts.ReadTextQueue = function()
+{
+	if ( !tts.On )
+	{
+		ttsQueue = [];
+		
+		tts.Synth.cancel();
+		
+		clearTimeout(timeoutResumeInfinity);
+		timeoutResumeInfinity = -1;
+		
+		clearTimeout(timeoutQueue);
+		timeoutQueue = -1;
+			
+		return;
+	}
+	//console.log( 'ReadTextQueue, ' + ttsQueue.length );
+	
+	//if ( ttsQueue.length == 0 ) {
+	//console.log('processing: empty' ); 
+	//}
+	
+	if ( ttsQueue.length == 0 ) 
+	{
+		//console.log('queue empty?');
+		//clearTimeout(timeoutQueue);
+		
+		//Reveal.next();
+		timeoutQueue = setTimeout(function(){ tts.ReadTextQueue(); }, 1000);
+		return;
+	}
+	
+	let txt = ttsQueue.shift(); // first item off the list
+	//console.log('processing:' + txt );
+	
+	if ( txt == '[next]' )
+	{
+		//console.log('***start next slide***');
+		Reveal.next();
+		
+		timeoutQueue = setTimeout(function(){ tts.ReadTextQueue(); }, 1000);
+		return;
+	}
+	
+	if ( txt == '[pause]' )
+	{
+		console.log('small speech pause');
+		timeoutQueue = setTimeout(function(){ tts.ReadTextQueue(); }, 1000); // default pause 5 seconds with no text
+		return;
+	}
+	
+	if ( txt == '[empty]' )
+	{
+		//console.log('speech pause');
+		timeoutQueue = setTimeout(function(){ tts.ReadTextQueue(); }, 8000); // default pause 5 seconds with no text
+		return;
+	}
 	
 	console.log('read:>' + txt );
+	
 	// Use tts to read text. A new speech synthesis utterance instance is required for each tts output for FF.
 	// Chrome lets you redefine the SpeechSynthesizerUtterance.txt property-
 	// as needed without having to create a new object every time you want speech.
-	let txt2 = txt.split(';').join('  ');
+	//let txt2 = txt.split(';').join('  ');
 	
-	let ttsSpeechChunk = new SpeechSynthesisUtterance(txt2);
-	 ttsSpeechChunk.voice = tts.Voices[tts.DvIndex]; //use default voice -- some voice must be assigned for FF to work.
-     ttsSpeechChunk.rate = tts.DvRate; 
-     tts.Synth.speak(ttsSpeechChunk);	 
+	let ttsSpeechChunk = new SpeechSynthesisUtterance(txt);
+	
+	tts.Voices = tts.Synth.getVoices();
+	
+	ttsSpeechChunk.voice = tts.Voices[tts.DvIndex]; //use default voice -- some voice must be assigned for FF to work.
 	 
+	 /*
+	 for (let voice of tts.Voices)
+	 {
+		//console.log('voice: ' + voice.name );
+		if ( (voice.name === 'Google UK English Female') )
+		{
+			//console.log ('Selected googles voice' );
+			ttsSpeechChunk.voice = voice;
+		}
+	 }
+	 */
+	 
+     ttsSpeechChunk.rate = tts.DvRate; 
+     tts.Synth.speak(ttsSpeechChunk);
+	 
+	 ttsSpeechChunk.onend = function(e)
+	 {
+		 //console.log('finished speech');
+		 timeoutQueue = setTimeout(function(){ tts.ReadTextQueue(); }, 500);
+		 clearTimeout(timeoutResumeInfinity);
+	 }
+	 
+	 ttsSpeechChunk.onstart = function(event) {
+		clearTimeout(timeoutResumeInfinity);
+		resumeInfinity();
+	 };
+	 
+}
+
+tts.ReadText = function(txt)
+{
+	// separate tokens 
+	let parts = txt.split('[pause]');
+	for (let i=0; i<parts.length; i++)
+	{
+		ttsQueue.push( parts[i] );
+		console.log('add queue: ' + parts[i] );
+		
+		if ( parts.length>1 && i<parts.length-1 )
+		{
+			ttsQueue.push( '[pause]' );
+			console.log('add queue: pause' );
+		}
+	}
+	
+	//ttsQueue.push(txt);
+	//console.log('add queue: ' + txt );
+	 
+	if ( timeoutQueue == -1 )
+	{
+		//console.log( ttsQueue );
+		timeoutQueue = setTimeout(function(){ tts.ReadTextQueue(); }, 200);
+	}
+	
+	 /*
 	 if ( last )
 	 {
 		ttsSpeechChunk.onend = function(e){
@@ -50,11 +207,12 @@ tts.ReadText = function(txt, last=false){
 
 	 }
 	 
+	 
 	 ttsSpeechChunk.onstart = function(event) {
 		clearTimeout(timeoutResumeInfinity);
 		resumeInfinity();
 	 };
-
+	*/
 
 	 
 };
@@ -86,15 +244,16 @@ tts.ReadVisElmts = function(){
 	{
 		for (let i=0; i<txtToRead.length; i++)
 		{
-			let last = false;
-			if ( i==txtToRead.length-1) last = true;
-			tts.ReadText(txtToRead[i], last);
+			tts.ReadText( txtToRead[i] );
 		}
+		tts.ReadText( '[next]' );
 	}
 	else 
 	{
+		tts.ReadText( '[empty]' );
+		tts.ReadText( '[next]' );
 		//console.log('setting timeout for the next slide');
-		setTimeout(function(){ Reveal.next(); }, 7000);
+		//setTimeout(function(){ Reveal.next(); }, 7000);
 	}
 
 	
@@ -130,8 +289,24 @@ tts.ReadAnyElmts = function(){
 		txtout = txtout + txtToRead[i].replace(/\s/g, "")
 	}
 	
+	
 	//console.log( 'txtout:>' + txtout + '<' );
 	
+	if ( txtout.length > 1 )
+	{
+		for (let i=0; i<txtToRead.length; i++)
+		{
+			tts.ReadText( txtToRead[i] );
+		}
+		tts.ReadText( '[next]' );
+	}
+	else 
+	{
+		tts.ReadText( '[empty]' );
+		tts.ReadText( '[next]' );
+	}
+	
+	/*
 	if ( txtout.length > 0 ) 
 	{
 		for (let i=0; i<txtToRead.length; i++)
@@ -146,7 +321,7 @@ tts.ReadAnyElmts = function(){
 		console.log('setting timeout for the next slide');
 		setTimeout(function(){ Reveal.next(); }, 5000);
 	}
-	
+	*/
 	
 };
 
@@ -154,9 +329,12 @@ tts.ToggleSpeech = function(){
 	// turn tts on/off with status announced
 	tts.On = !(tts.On);
 	if (tts.On) {
+		console.log('Starting speech');
+		tts.Read();
 		//tts.ReadText("speech On!")
 	} else {
-		clearTimeout(timeoutResumeInfinity);
+		console.log('Stopping speech');
+		
 		tts.Synth.cancel();
 		//tts.ReadText("speech Off!")
 	};
@@ -164,12 +342,7 @@ tts.ToggleSpeech = function(){
 
 
 
-for (var ix = 0; ix < tts.Voices.length; ix++) { 
-//find the default voice-- needed for FF, in Chrome voices[0] works as the default.
-	if (tts.Voices[ix].default) {
-		tts.DvIndex = ix;
-	}
-};
+
 
 tts.Read = function()
 {
@@ -186,6 +359,7 @@ tts.Read = function()
 }
 	
 Reveal.addEventListener( 'slidechanged', function( event ) {
+
 	tts.Read();
 }
 );
