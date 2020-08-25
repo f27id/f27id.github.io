@@ -1,3 +1,14 @@
+
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+var selectvoice = "";
+if ( urlParams.has('voice') )
+{
+	selectvoice = urlParams.get('voice')
+}
+
+
 var tts = {};
 tts.Synth = window.speechSynthesis;
 tts.Voices = [];
@@ -38,10 +49,20 @@ setTimeout(function(){
 			console.log( '>>> default voice: ' + voice.name );
 		}
 		// *** hack - force voice ***
-		
+		/*
 		if ( voice.name == 'Google UK English Female' )
 		{
 			tts.DvIndex = ix;
+		}
+		*/
+		if ( selectvoice != "" )
+		{
+			if ( voice.name == selectvoice )
+			{
+				console.log( 'forcing voice: ' + selectvoice );
+				tts.DvIndex = ix;
+				break;
+			}
 		}
 		
 	}
