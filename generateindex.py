@@ -26,6 +26,9 @@ titles=["Introduction",
 		"Human AI Interaction",
 		"Revision" ];
 		
+videos = { "Introduction": "https://www.youtube.com/embed/5f9x4zwnzMw?start=5&autoplay=1"
+		 }
+	
 
 txt = ""
 
@@ -46,6 +49,7 @@ F27ID - <a href='https://www.macs.hw.ac.uk/students/cs/courses/f27id-introductio
 <td>Unit            </td>
 <td>Topic   		</td>
 <td>Lecture 		</td>
+<td>Video 			</td>
 <td>        		</td>
 <td>Notes   		</td>
 <td>Labs    		</td>
@@ -56,6 +60,9 @@ F27ID - <a href='https://www.macs.hw.ac.uk/students/cs/courses/f27id-introductio
 def FileExist(fn):
 	import os.path
 	return os.path.exists( fn )
+
+def VideoExist(fn):
+	return 0
 
 
 wkno  = 0
@@ -88,6 +95,10 @@ for i in range( 0, len(titles) + 1 ): # + 1 is due to week 6 skip
 	if ( FileExist( lecturefilename ) ):
 		lectureurl = "<a href='" + lecturefilename + "'> Slides </a>"
 	
+	videourl = "-"
+	if ( topic in videos ):
+		videourl = "<a href='" + videos[ topic ] + "'> Video </a>"
+		
 	notesurl = '-'
 	notesfilename = './material/notes/Notes %02d - %s.html' % ( no, topic )
 	if ( FileExist( notesfilename ) ):
@@ -115,12 +126,13 @@ for i in range( 0, len(titles) + 1 ): # + 1 is due to week 6 skip
 	<td>%d      	</td>
 	<td>%s          </td>
 	<td>%s          </td>
+	<td>%s          </td>
 	<td>        	</td>
 	<td>%s          </td>
 	<td>%s    		</td>
 	<td>%s     		</td>
 	</tr>
-	""" % (wkno, unit, topic, lectureurl, notesurl, labsurl, quizsurl  )
+	""" % (wkno, unit, topic, lectureurl, videourl, notesurl, labsurl, quizsurl  )
 
 	txt += val
 	
