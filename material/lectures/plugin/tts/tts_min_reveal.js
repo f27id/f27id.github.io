@@ -121,6 +121,7 @@ tts.ReadTextQueue = function()
 	
 	if ( txt == '[next]' )
 	{
+		console.log('read:>' + '[next]' );
 		//console.log('***start next slide***');
 		Reveal.next();
 		
@@ -130,7 +131,8 @@ tts.ReadTextQueue = function()
 	
 	if ( txt == '[pause]' )
 	{
-		console.log('small speech pause');
+		//console.log('small speech pause');
+		console.log('read:>' + '[pause]' );
 		timeoutQueue = setTimeout(function(){ tts.ReadTextQueue(); }, 1000); // default pause 5 seconds with no text
 		return;
 	}
@@ -138,6 +140,7 @@ tts.ReadTextQueue = function()
 	if ( txt == '[empty]' )
 	{
 		//console.log('speech pause');
+		console.log('read:>' + '[empty]' );
 		timeoutQueue = setTimeout(function(){ tts.ReadTextQueue(); }, 8000); // default pause 5 seconds with no text
 		return;
 	}
@@ -190,10 +193,16 @@ tts.ReadText = function(txt)
 	let parts = txt.split('[pause]');
 	for (let i=0; i<parts.length; i++)
 	{
-		ttsQueue.push( parts[i] );
-		console.log('add queue: ' + parts[i] );
+		let part = parts[i];
+		part = part.trim();
+
+		if ( part.length > 0 )
+		{
+			ttsQueue.push( part );
+			console.log('add queue: ' + part );
+		}
 		
-		if ( parts.length>1 && i<parts.length-1 )
+		if ( parts.length>1 )
 		{
 			ttsQueue.push( '[pause]' );
 			console.log('add queue: pause' );
