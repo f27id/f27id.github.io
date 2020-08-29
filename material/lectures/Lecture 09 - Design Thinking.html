@@ -1895,15 +1895,7 @@ And make sure to come up with a SPECIFIC task plan for the expo that provides ev
 
 function togglesound()
 {
-	tts.On = !tts.On;
-	if ( tts.On )
-	{
-		tts.Read();
-	}
-	else 
-	{
-		tts.Synth.cancel()
-	}	
+	tts.ToggleSpeech();	
 }
 
 		</script>

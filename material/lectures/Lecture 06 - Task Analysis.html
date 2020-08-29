@@ -60,13 +60,14 @@
 	## Overview
 
 	* What is the Task Analysis?
-	* Goals & benefits of evaluation/testing
+	* Goals and benefits of Task Analysis
+	* Evaluation and testing
 	* Different types of user-based testing
 	* Qualitative and Quantitative Data
 	* Details on experimental research in HCI   
 	* Questions and Discussion
 		
-		<aside class='notes'>
+<aside class='notes'>
 Students seem to have relatively little difficulty with the concept of testing. They believe it has to be done, and few have a problem with the process. One problem: in the press of time they may tend to fall back on family and friends. This is not a total loss so long as they are getting performance measures: the time to find something isn't warped because the user is your brother. Preference measures are less reliable: of course your mother is going to think it's a great site. Suggest they concentrate on performance.
 </aside>
 
@@ -151,8 +152,6 @@ The major goal of evaluation is to influence decision-making or policy formulati
   * Nielsen: "once it is found that two or three people are totally    confused by the home page, little is gained by watching more    people suffer through the same flawed design"   
  
 <aside class='notes'>
- We learned the types of user evaluation in our previous lectures.
-
 In an ideal world user testing with a large sample of the intended user population would routinely occur, however due to resource limitations, user-based tests are often constrained. As a result, there is considerable interest among HCI professionals in determining how to gain the most information from the smallest sample of users. While popular myths exist about being able to determine a majority of problems with only 2 or 3 users, Lewis (1994) has shown that the sample size requirement is largely dependent on the type of errors one seeks to identify and their relative probability of occurrence. Whereas 3 users might identify many problems in a new application, substantially more users will be required to tease out the remaining problems in a mature or revised product.
 
 In the early 1990s, Jakob Nielsen, at that time a researcher at Sun Microsystems, popularized the concept of using numerous small usability tests-typically with only five test subjects each-at various stages of the development process. His argument is that, once it is found that two or three people are totally confused by the home page, little is gained by watching more people suffer through the same flawed design
@@ -779,15 +778,7 @@ The evaluation approach influences the methods used, and in turn, how    data is
 
 function togglesound()
 {
-	tts.On = !tts.On;
-	if ( tts.On )
-	{
-		tts.Read();
-	}
-	else 
-	{
-		tts.Synth.cancel()
-	}	
+	tts.ToggleSpeech();	
 }
 
 		</script>

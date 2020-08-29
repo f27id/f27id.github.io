@@ -1049,15 +1049,7 @@ What is the dependent variable?
 
 function togglesound()
 {
-	tts.On = !tts.On;
-	if ( tts.On )
-	{
-		tts.Read();
-	}
-	else 
-	{
-		tts.Synth.cancel()
-	}	
+	tts.ToggleSpeech();	
 }
 
 		</script>
