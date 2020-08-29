@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Introduction to Interaction Design: Lecture - Testing and Evaluation</title>
+
+		<link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
+		<meta name="description" content="Creating beautiful interactive and engaging interfaces">
+		<meta name="author" content="Ben Kenwright">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="./css/reset.css">
+		<link rel="stylesheet" href="./css/reveal.css">
+		<link rel="stylesheet" href="./css/theme/white.css" id="theme">
+		
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="./lib/css/monokai.css">
+		
+		<link rel="stylesheet" href="./css/reveal-override.css"/>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? './css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+							
+		<div class="reveal">
+		
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+		
+<section>
+	<h2>Testing and Evaluation</h2>
+	<h4>F27ID Introduction to Interactive Design</h4>
+	<p>
+		<small>2020-2021</small>
+	</p>
+</section>
+
+<section data-markdown style="text-align: left;">
+	<textarea data-template>
+	## Overview
+
+	* Goals and benefits of Testing and Evaluating Designs
+	* Different types of user-based testing
+	* Qualitative and Quantitative Data
+	* Details on experimental research in HCI   
+	* Questions and Discussion
+		
+<aside class='notes'>
+Students seem to have relatively little difficulty with the concept of testing. They believe it has to be done, and few have a problem with the process. One problem: in the press of time they may tend to fall back on family and friends. This is not a total loss so long as they are getting performance measures: the time to find something isn't warped because the user is your brother. Preference measures are less reliable: of course your mother is going to think it's a great site. Suggest they concentrate on performance.
+</aside>
+
+	</textarea>
+</section>
+				
+				
+
+<!--
+*****************
+--->
+
+
+ 
+<section data-markdown> 
+<textarea data-template>
+## Goals of Evaluation (Summary)   
+  * Assess extent of system functionality
+  * Assess effect of interface on user
+  * Identify specific problems
+  * Designers need to check whether their ideas are really what users    need/want; or whether the final product works as expected.
+  * To do that, we need some form of methods, or more specifically,    empirical methods for HCI.   
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## The Goals of testing   
+* Discover errors and areas of improvement in:
+* Performance -- How much time, and how many steps, are required for    people to complete basic tasks? (For example, find something to buy,    create a new account, and order the item.)
+* Accuracy -- How many mistakes did people make? (And were they fatal    or recoverable with the right information?)
+* Recall -- How much does the person remember afterwards or after    periods of non-use?
+* Emotional response -- How does the person feel about the tasks    completed? Is the person confident, stressed? Would the user    recommend this system to a friend?   
+ 
+<aside class='notes'>
+Usability testing is a black-box testing technique. The aim is to observe people using the product to discover errors and areas of improvement. Usability testing generally involves measuring how well test subjects respond in four areas: efficiency, accuracy, recall, and emotional response. The results of the first test can be treated as a baseline or control measurement; all subsequent tests can then be compared to the baseline to indicate improvement.
+
+The generic goal of most evaluations is to provide "useful feedback" to a variety of audiences including sponsors, donors, client-groups, administrators, staff, and other relevant constituencies.
+The major goal of evaluation is to influence decision-making or policy formulation through the provision of empirically-driven feedback.
+
+</aside> 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## Usability 
+  * Usability refers to the extent to which a product can be    used by specified users to achieve specified goals with    effectiveness, efficiency and satisfaction in a specified    context of user (ISO 9241-11)
+  * Usability measures the quality of a user's experience    when interacting with a product or system
+  * Ease of learning
+  * Efficiency of use
+  * Memorability
+  * Error frequency and severity
+  * Subjective satisfaction
+
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## User-based evaluation 
+  * Considered to yield the most reliable and valid estimate of an    application's usability.
+  * In a typical user-based evaluation, test subjects are asked to    perform a set of tasks with the technology.
+  * Depending on the primary focus of the evaluator, the users' success    at completing the tasks and their speed of performance may be    recorded.
+  * Large sample of users would be good, but 3 (Lewis) or 5 (Nielsen)    are often enough to uncover the majority of problems.
+  * Nielsen: "once it is found that two or three people are totally    confused by the home page, little is gained by watching more    people suffer through the same flawed design"   
+ 
+<aside class='notes'>
+In an ideal world user testing with a large sample of the intended user population would routinely occur, however due to resource limitations, user-based tests are often constrained. As a result, there is considerable interest among HCI professionals in determining how to gain the most information from the smallest sample of users. While popular myths exist about being able to determine a majority of problems with only 2 or 3 users, Lewis (1994) has shown that the sample size requirement is largely dependent on the type of errors one seeks to identify and their relative probability of occurrence. Whereas 3 users might identify many problems in a new application, substantially more users will be required to tease out the remaining problems in a mature or revised product.
+
+In the early 1990s, Jakob Nielsen, at that time a researcher at Sun Microsystems, popularized the concept of using numerous small usability tests-typically with only five test subjects each-at various stages of the development process. His argument is that, once it is found that two or three people are totally confused by the home page, little is gained by watching more people suffer through the same flawed design
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## Certain Categories of evaluation   
+  * User-based evaluations: where a sample of the intended users try to    use the application
+  * Lab studies (experimental research, Usability testing), field studies
+  * Observation Methods: Think aloud, video analysis
+  * Questionnaires, Interviews, Focus Groups
+  * Some are Quantitative others are Qualitative
+
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## Method Selection 
+The evaluation approach influences the methods used, and in turn, how    data is collected, analyzed and presented.
+  
+  * E.g., field studies typically:
+    - Involve observation and interviews.
+    - Do not involve controlled tests in a laboratory.
+    - Produce qualitative data.
+  
+  * E.g., Usability testing typically:
+    - Involves users, interviews, design, questionnaires.
+    - Conducted in the laboratory or in a natural setting.
+    - Primary goal is to test how usable the interface is with intended populations.
+ 
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+### Quantitative or Qualitative?   
+  * Data is either Qualitative or Quantitative
+    * E.g. Interview-based data is Qualitative
+  * Questionnaires can be Quantitative (ratings-based), Qualitative (short-questions)
+  * Other forms of Quantitative data includes
+    * time taken to do a task, performance 
+  * Selection depends on:
+    * Overall research or evaluation goal
+    * Ethical and practical issues
+    * Resources, cost, logistics	
+    * Availability of participants and sample size
+    * Skills of team, background, philosophy
+    * One is more rigid than the other
+  * Hence an evaluation proposal is imperative   
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## Reliability, Validity and Scope   
+  * Can the study be replicated: reliability
+  * Are you measuring what you expect: validity
+  * Are there any unexpected effects: bias
+  * Can the findings be generalised: scope   
+  
+<img src='.\images\lec07Slide10-3.png' 
+ style = '
+   border:0;
+   width:100%;
+   height:auto;
+' >
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## Questionnaire Design   
+  * Interview vs Questionnaire?
+  * Video taped?   
+  
+<img src='.\images\lec07Slide11-3.png' 
+ style = '
+   border:0;
+   width:400px;
+   height:auto;
+' >
+<img src='.\images\lec07Slide11-4.png' 
+ style = '
+   border:0;
+   width:650px;
+   height:auto;
+' >
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## New, adapt or reuse?   
+  * Established questionnaires will give more reliable and repeatable results    than ad hoc questionnaires. 
+  * Some questionnaires for assessing the perceived usability of an    interactive system: 
+  * Questionnaire for User Interface Satisfaction (QUIS) (1988)
+  * Computer System Usability Questionnaire (CSUQ) (1995) 
+  * System Usability Scale (SUS) (1996)   
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## Observations / Video    Coding   
+  * E.g. Child Robot Interaction Evaluation    Setup
+    * Video Analysis 
+  
+  * E.g., measuring engagement through calculating duration of
+    * Child eye-gaze facing robot,
+    * Facial and Verbal Expressions,
+    * Gestures
+
+<img src='.\images\lec07Slide13-4.png' 
+ style = '
+   border:0;
+   width:372.8239px;
+   height:auto;
+' >
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+
+<img src='.\images\lec07Slide14-2.png' 
+ style = '
+   border:0;
+   width:100%;
+   height:auto;
+' >
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## Interview Example    
+  * Goal: To understand behaviours and roles for social robots in    Education
+  * Users: School Teachers 
+  * Method: Interview
+  * E.g. Interview questions include:
+  * How do you think a robot can contribute towards efficient language    learning? ?
+  * How do you want a robot to show different gestures during a one to one    interaction? ?
+  * How do you want a robot to display a personality according to a child? ?
+  * How do you want a robot to react to children emotions? ?
+  * What kind of role a robot should play to improve learning? ?
+  * How do you want a robot to store child's memory? ?
+ 
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+
+<img src='.\images\lec07Slide16-1.png' 
+ style = '
+   border:0;
+   width:100%px;
+   height:auto;
+' >
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+
+<img src='.\images\lec07Slide17-2.png' 
+ style = '
+   border:0;
+   width:100%;
+   height:auto;
+' >
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+### Field Trail Example 
+ 
+<img src='.\images\lec07Slide18-3.png' 
+ style = '
+   border:0;
+   width:300px;
+   height:auto;
+' >
+  * To check the applicability of Interactive Robots as    Social Partners and Peer tutors for Children in a    school
+  * Steps
+    * Deploy a robot in one of the rooms insides the    school, say a science laboratory
+    * A robot can gesture and speak English using a    vocabulary of 300 sentences and recognize 50 words
+    * Idea is to analyse the applicability of robots    through observing overall child-robot interaction
+  
+<img src='.\images\lec07Slide18-5.png' 
+ style = '
+   border:0;
+   width:263.6551px;
+   height:auto;
+' >
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+<img src='.\images\lec07Slide19-1.png' 
+ style = '
+   border:0;
+   width:100%;
+   height:auto;
+' >
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## Analyzing Qualitative Data from the Focus  Group   
+  * Content Analysis
+  * In content analysis, qualitative remarks from the    participants are "coded" into predefined categories via    inferences made by independent human coders
+  * Setup your coding scheme
+  * Operationalize the variables
+  * Clearly define all categories
+  * Identify unit for coding 
+  * Normally: 2 independent coders coder and a check is made    for inter coder agreement (i.e. check for bias)   
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+
+<img src='.\images\lec07Slide21-2.png' 
+ style = '
+   border:0;
+   width:100%;
+   height:auto;
+' >
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## Focus Group Example  
+<img src='.\images\lec07Slide22-3.png' 
+ style = '
+   border:0;
+   width:300px;
+   height:auto;
+' >
+  * Learning about children views' on social    robots in education
+  * Children discuss themes in groups of    three or four on the use of social robots    in education
+  * Themes include: 
+    * Robots as peers 
+    * Robots as tutors   
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## Other Example 
+
+<img src='.\images\lec07Slide23-2.png' 
+ style = '
+   border:0;
+   width:100%;
+   height:auto;
+' >
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## Experimental Research   
+  * A test of the effect of a single variable by changing it    while keeping all other variables the same.
+  * A controlled experiment generally compares the results    obtained from an experimental sample against a    control sample. 
+  * General terms
+  * Participant (subject)
+  * Independent variables (test conditions)
+  * Dependent variables (what you measure)   
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## IV's and DV's   
+  * Independent Variables (IV): what you as the researcher vary or    manipulate
+  * Type of interface/app
+  * Type of feedback
+  * Type of Menu
+  * Dependent Variables (DV): What you measure
+  * Time
+  * Performance (Accuracy, Errors)
+  * Subjective Ratings   
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## Example of between subjects and within    subjects   
+  * A sports drink company wants to test two types of drinks (D1 and D2) and    their effect on racers
+  * If all participants try both drinks (within)
+  * If half of the participants try one drink only (between)
+  * We can also have a control group (D0 - water or no drink)
+  * We can also have a mixed design (the length of the race could be a second    IV and be between subjects, type of drink is within)   
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+
+<img src='.\images\lec07Slide27-2.png' 
+ style = '
+   border:0;
+   width:100%;
+   height:auto;
+' >
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+## Confound Variables   
+  * A variable that provides an alternative explanation to the results that we    see
+  * Clouds the effect of the IV
+  * So in the drinks example, a confound variable could be:
+  * Temperature at the time of the race
+  * Previous experience
+  * Age of racers   
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+
+<img src='.\images\lec07Slide29-2.png' 
+ style = '
+   border:0;
+   width:100%;
+   height:auto;
+' >
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+<section data-markdown> 
+<textarea data-template>
+#### Guideline for Coursework 2 - a possible template  
+ 
+* Evaluation Method (what is the method used and summarize the    setup)
+* Procedure: the sequence of steps from welcoming participant to the    participant leaving the experiment room, in other words: you provide    enough detail on the process of data collection to allow another person to    repeat your research.  How were groups formed, what instructions were  given to subjects, and so on 
+* Materials: Here you describe the equipment/instruments used for data    collection (computers, microphones, screens, tangible objects, etc).
+* Setup: where was the participant seated, how far from the screen, etc.
+* Measurements: details on data collection instruments (what is being    measured and how)
+* Participants: Here you need to identify the units you studied (what types    of users).  When the research units are humans, they are most often    referred to as "participants."    
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+ 
+ 
+ 
+
+ 
+ 
+
+				
+<!--
+*****************
+--->
+				
+				
+
+
+<section data-markdown style="text-align: left;">
+	<textarea data-template>
+	## Summary
+	
+	* Understand Core Concepts (Task Analysis) 
+	* Structure and Terminology
+	* High and Low Level View
+	</textarea>
+</section>
+
+
+<section data-markdown> 
+<textarea data-template>
+## Recommended Reading 
+
+<img src='.\images\lec07Slide31-3.png' 
+ style = '
+   border:0;
+   width:400px;
+   height:auto;
+' >
+  
+  Interaction Design - Beyond Human-   Computer Interaction <br>
+  Chapter 14
+
+ 
+<aside class='notes'>
+ 
+</aside>
+ 
+</textarea>
+</section>
+
+
+<section data-markdown style="text-align: left;">
+	<textarea data-template>
+	## To do this week ...
+
+	* Read over the lectures 
+	* **Review** the revision questions 
+	* Work through labs/tutorial practicals 
+	* Experiment (get into good habits) 
+	* **Coursework** 
+
+	</textarea>
+</section>
+				
+
+			</div>
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				slideNumber: false,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/tts/tts_min_reveal.js', async: false}
+				]});
+				
+				
+			Reveal.configure({
+			  keyboard: {
+				81: function() {tts.Synth.cancel()}, // press q to cancel speaking and clear speech queue.
+				  84: function() {tts.ToggleSpeech()}  // press t to toggle speech on/off
+
+			  }
+			});
+
+function togglesound()
+{
+	tts.ToggleSpeech();	
+}
+
+		</script>
+		
+		
+<!--
+Add some helper buttons to the bottom left 
+* home (back to the main page)
+* print button (puts the slides in a printable format)
+-->
+	
+<div style="display: block; position: absolute; bottom: 5px; left: 5px; margin-left: 0px; z-index: 20;">
+	<a href="https://f27id.github.io"><img src="./images/webhome.png" width="8%"></a>
+</div>
+
+<div style="display: block; position: absolute; bottom: 3px; left: 50px; margin-left: 0px; z-index: 20; text-align: left;">
+	<a href="?print-pdf" onclick="window.open(this.href, 'print window', 'width=1000,height=550').print(); return false"><img src="./images/webprint.png" width="7.5%"></a>
+</div>
+
+<!--
+<div style="display: block; position: absolute; bottom: 3px; left: 95px; margin-left: 0px; z-index: 20; text-align: left;">
+	<a onclick="togglesound();"><img src="./images/webtalk.png" width="7.5%"></a>
+</div>
+-->
+	
+
+</body>
+</html>

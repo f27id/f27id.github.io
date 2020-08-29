@@ -53,22 +53,28 @@
 	<p>
 		<small>2020-2021</small>
 	</p>
+<aside class='notes'>
+Task Analysis [pause]
+</aside>
 </section>
 
-<section data-markdown style="text-align: left;">
+<section data-markdown>
 	<textarea data-template>
 	## Overview
 
-	* What is the Task Analysis?
-	* Goals and benefits of Task Analysis
-	* Evaluation and testing
-	* Different types of user-based testing
-	* Qualitative and Quantitative Data
-	* Details on experimental research in HCI   
+	* **What** is Task Analysis?
+	* Task **Models**
+    * Analysis **methods** 
+	* Examples 
 	* Questions and Discussion
 		
 <aside class='notes'>
-Students seem to have relatively little difficulty with the concept of testing. They believe it has to be done, and few have a problem with the process. One problem: in the press of time they may tend to fall back on family and friends. This is not a total loss so long as they are getting performance measures: the time to find something isn't warped because the user is your brother. Preference measures are less reliable: of course your mother is going to think it's a great site. Suggest they concentrate on performance.
+Today's lecture is about Task Analysis [pause]
+That is, what is task analysis?
+Why is it so important and most crucially.
+How to use task analysis in interactive design.
+[pause]
+We'll discuss a variety of examples and conclude with some questions and a summary of the topic.
 </aside>
 
 	</textarea>
@@ -81,607 +87,385 @@ Students seem to have relatively little difficulty with the concept of testing. 
 --->
 
 
+<section data-markdown> 
+<textarea data-template>
+## What is Task Analysis?
+
+<aside class='notes'>
+We'll start off by asking the important question [pause]
+What is task analysis?
+</aside>
+ 
+</textarea>
+</section>
+
+
  
 <section data-markdown> 
 <textarea data-template>
-## Goals of Evaluation (Summary)   
-  * Assess extent of system functionality
-  * Assess effect of interface on user
-  * Identify specific problems
-  * Designers need to check whether their ideas are really what users    need/want; or whether the final product works as expected.
-  * To do that, we need some form of methods, or more specifically,    empirical methods for HCI.   
- 
+## What is Task Analysis?
+Methods to analyse people's jobs:
+  * what **people** do
+  * what things they work with
+  * what they must know
+
 <aside class='notes'>
- 
+Task analysis is basically a process that a team goes through to determine your most crucial user goals in the app (for example, purchases, social shares, adding bookmarks, etc.) and the number of steps (or tasks) that a user must complete to get to the objective.
+[pause]
+In a nutshell, task analysis is a method of breaking a piece of work down into smaller elements and examining the relationships between the elements
 </aside>
  
 </textarea>
 </section>
  
+
  
  
 <section data-markdown> 
 <textarea data-template>
-## The Goals of testing   
-* Discover errors and areas of improvement in:
-* Performance -- How much time, and how many steps, are required for    people to complete basic tasks? (For example, find something to buy,    create a new account, and order the item.)
-* Accuracy -- How many mistakes did people make? (And were they fatal    or recoverable with the right information?)
-* Recall -- How much does the person remember afterwards or after    periods of non-use?
-* Emotional response -- How does the person feel about the tasks    completed? Is the person confident, stressed? Would the user    recommend this system to a friend?   
- 
+## An **Example**
+* In order to clean the house
+  * get the vacuum cleaner out
+  * fix the appropriate attachments
+  * clean the rooms
+  * when the dust bag gets full, empty it
+  * put the vacuum cleaner and tools away
+
+* To accomplish the tasks, you must know about:
+  * vacuum cleaners, their attachments, dust bags, cupboards, rooms etc.
 <aside class='notes'>
-Usability testing is a black-box testing technique. The aim is to observe people using the product to discover errors and areas of improvement. Usability testing generally involves measuring how well test subjects respond in four areas: efficiency, accuracy, recall, and emotional response. The results of the first test can be treated as a baseline or control measurement; all subsequent tests can then be compared to the baseline to indicate improvement.
-
-The generic goal of most evaluations is to provide "useful feedback" to a variety of audiences including sponsors, donors, client-groups, administrators, staff, and other relevant constituencies.
-The major goal of evaluation is to influence decision-making or policy formulation through the provision of empirically-driven feedback.
-
-</aside> 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
-## Usability 
-  * Usability refers to the extent to which a product can be    used by specified users to achieve specified goals with    effectiveness, efficiency and satisfaction in a specified    context of user (ISO 9241-11)
-  * Usability measures the quality of a user's experience    when interacting with a product or system
-  * Ease of learning
-  * Efficiency of use
-  * Memorability
-  * Error frequency and severity
-  * Subjective satisfaction
-
- 
-<aside class='notes'>
- 
+To help you relate to the concept of task analysis look at the following example.
+[pause]
+The task of cleaning a house.
+[pause]
+Before you even beging the task you break the solution down into steps.
 </aside>
  
 </textarea>
 </section>
- 
- 
- 
+
+
+
 <section data-markdown> 
 <textarea data-template>
-## User-based evaluation 
-  * Considered to yield the most reliable and valid estimate of an    application's usability.
-  * In a typical user-based evaluation, test subjects are asked to    perform a set of tasks with the technology.
-  * Depending on the primary focus of the evaluator, the users' success    at completing the tasks and their speed of performance may be    recorded.
-  * Large sample of users would be good, but 3 (Lewis) or 5 (Nielsen)    are often enough to uncover the majority of problems.
-  * Nielsen: "once it is found that two or three people are totally    confused by the home page, little is gained by watching more    people suffer through the same flawed design"   
- 
-<aside class='notes'>
-In an ideal world user testing with a large sample of the intended user population would routinely occur, however due to resource limitations, user-based tests are often constrained. As a result, there is considerable interest among HCI professionals in determining how to gain the most information from the smallest sample of users. While popular myths exist about being able to determine a majority of problems with only 2 or 3 users, Lewis (1994) has shown that the sample size requirement is largely dependent on the type of errors one seeks to identify and their relative probability of occurrence. Whereas 3 users might identify many problems in a new application, substantially more users will be required to tease out the remaining problems in a mature or revised product.
+## Approaches to task analysis
+* **Task decomposition**
+  - splitting task into (ordered) subtasks
+* **Knowledge** based techniques
+  - what the user knows about the task and how it is organised
+* **Entity or object** based analysis
+  - relationships between objects, actions and the people who perform them
+* lots of different notations/techniques
 
-In the early 1990s, Jakob Nielsen, at that time a researcher at Sun Microsystems, popularized the concept of using numerous small usability tests-typically with only five test subjects each-at various stages of the development process. His argument is that, once it is found that two or three people are totally confused by the home page, little is gained by watching more people suffer through the same flawed design
+<aside class='notes'>
+There are different approaches to task analysis [pause]
+For example [pause]
+    Task decomposition:  tasks are broken into subtasks and the order in which they are performed is taken into account.
+	[pause]
+    Knowledge-based techniques: looks at what users need to know about objects and actions in a task and how knowledge is organized.
+	[pause]
+    Entity-relation based analysis: in this objects and actors are identified, relationships between them and the actions they perform.
 </aside>
  
 </textarea>
 </section>
- 
- 
- 
+
+
+
+
 <section data-markdown> 
 <textarea data-template>
-## Certain Categories of evaluation   
-  * User-based evaluations: where a sample of the intended users try to    use the application
-  * Lab studies (experimental research, Usability testing), field studies
-  * Observation Methods: Think aloud, video analysis
-  * Questionnaires, Interviews, Focus Groups
-  * Some are Quantitative others are Qualitative
 
- 
+## General Method
+* **Observe** and understand the task
+* **Collect** unstructured lists of words and actions
+* **Organize** using notation or diagrams
+
 <aside class='notes'>
- 
+As a general method when you begin the process of task analysis you should.
+Firstly, observe the task.
+Secondly, collect an unstructured list of the steps or actions.
+And finally, organize the notion into a set of structured stages (using either notation or a diagram).
 </aside>
  
 </textarea>
 </section>
- 
- 
- 
+
+
 <section data-markdown> 
 <textarea data-template>
-## Method Selection 
-The evaluation approach influences the methods used, and in turn, how    data is collected, analyzed and presented.
+## Differences from other techniques
+
+<img src='./images/taskvs.png' />
+
+<aside class='notes'>
+You can see the the table which shows a comparison between task analysis and other techniques.
+
+</aside>
+ 
+</textarea>
+</section>
+
+
+<section data-markdown> 
+<textarea data-template>
+## Aim of **Task Decomposition**
+
+* Describe the actions people do 
+* Structure them within a task subtask hierarchy 
+* Describe order of subtasks
+
+---
+
+Variants:
+* **Hierarchical Task Analysis (HTA)** most common 
+* Concur Task Trees CTT (CNUCE, Pisa) uses LOTOS temporal operators
+
+<aside class='notes'>
+The aim of task decomposition is to describe the actions people do in a structured way [pause]
+Variants of this include Hierarchical Task Analysis and Concur Task Trees.
+</aside>
+ 
+</textarea>
+</section>
+
+
+
+
+<section data-markdown> 
+<textarea data-template>
+## Textual HTA description
+
+<img src='./images/taskv2.png' />
+
+<aside class='notes'>
+And example of a hierarchical Task Analysis using textual description for cleaning a house [pause].
+As you can see from the steops, this provides an understanding of the tasks users need to perform to achieve certain goals.
+[pause]
+</aside>
+ 
+</textarea>
+</section>
+
+
+
+
+<section data-markdown> 
+<textarea data-template>
+## Generating the Hierarchy
+
+* 1 **get** list of tasks
+* 2 **group** tasks into higher level tasks
+* 3 decompose lowest **level** tasks further
+
+---
+
+Stopping rules
+ * How do we know when to stop?
+ * Is “empty the dust bag” simple enough?
+ * Purpose: expand only relevant tasks
+ * Motor actions: lowest sensible level
+
+<aside class='notes'>
+To help you get started generating hierarchies a good rule of thumb is to follow these three steps [pause]
+Firstly, get a list of tasks [pause]
+Secondly group the tasks into higher level tasks [pause]
+Finally continue to decompose the lowest level tasks [pause]
+
+To help you know when you've finished [pause]
+You should use judgment calls, such as, is the process simple enough [pause]
+Are the tasks logical and in a sensible order (from high to low).
+
+</aside>
+ 
+</textarea>
+</section>
+
+
+
+
+ 
+<section>
+	<section data-markdown data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+		<textarea data-template>
+		## Revision Question
+		What does HTA stand for? 
+		
+		
+		* a) High-Low Testing Activity
+		* b) Hierarchical Testing Analysis
+		* c) Human Task Analysis
+		* d) Hierarchical Task Analysis
+    
+<aside class='notes'> 
+      OK! Quiz time: What does the acronym HTA stand for?
+	  [pause] Take a moment to pick your answer [pause][pause][pause][pause] 
+</aside>
+
+
+		</textarea>
+	</section>
+	
+	<section data-markdown data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+		<textarea data-template>
+		## Answer
+		
+		Answer: **d) Hierarchical Task Analysis**
+<aside class='notes'> 
+       Did you guess right?
+	   The correct answer is d.[pause][pause] 
+</aside>
+		</textarea>
+	</section>
+</section>
+
+
+
+
+
+
+<section data-markdown> 
+<textarea data-template>
+## Tasks as **Explanations**
+
+* Imagine asking the user the question:
+
+**What are you doing now?**
+
+---
   
-  * E.g., field studies typically:
-    - Involve observation and interviews.
-    - Do not involve controlled tests in a laboratory.
-    - Produce qualitative data.
-  
-  * E.g., Usability testing typically:
-    - Involves users, interviews, design, questionnaires.
-    - Conducted in the laboratory or in a natural setting.
-    - Primary goal is to test how usable the interface is with intended populations.
- 
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
-### Quantitative or Qualitative?   
-  * Data is either Qualitative or Quantitative
-    * E.g. Interview-based data is Qualitative
-  * Questionnaires can be Quantitative (ratings-based), Qualitative (short-questions)
-  * Other forms of Quantitative data includes
-    * time taken to do a task, performance 
-  * Selection depends on:
-    * Overall research or evaluation goal
-    * Ethical and practical issues
-    * Resources, cost, logistics	
-    * Availability of participants and sample size
-    * Skills of team, background, philosophy
-    * One is more rigid than the other
-  * Hence an evaluation proposal is imperative   
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
-## Reliability, Validity and Scope   
-  * Can the study be replicated: reliability
-  * Are you measuring what you expect: validity
-  * Are there any unexpected effects: bias
-  * Can the findings be generalised: scope   
-  
-<img src='.\images\lec07Slide10-3.png' 
- style = '
-   border:0;
-   width:100%;
-   height:auto;
-' >
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
-## Questionnaire Design   
-  * Interview vs Questionnaire?
-  * Video taped?   
-  
-<img src='.\images\lec07Slide11-3.png' 
- style = '
-   border:0;
-   width:400px;
-   height:auto;
-' >
-<img src='.\images\lec07Slide11-4.png' 
- style = '
-   border:0;
-   width:650px;
-   height:auto;
-' >
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
-## New, adapt or reuse?   
-  * Established questionnaires will give more reliable and repeatable results    than ad hoc questionnaires. 
-  * Some questionnaires for assessing the perceived usability of an    interactive system: 
-  * Questionnaire for User Interface Satisfaction (QUIS) (1988)
-  * Computer System Usability Questionnaire (CSUQ) (1995) 
-  * System Usability Scale (SUS) (1996)   
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
-## Observations / Video    Coding   
-  * E.g. Child Robot Interaction Evaluation    Setup
-    * Video Analysis 
-  
-  * E.g., measuring engagement through calculating duration of
-    * Child eye-gaze facing robot,
-    * Facial and Verbal Expressions,
-    * Gestures
+* For the same action the answer may be:
+  * typing ctrl-B
+  * making a word bold
+  * emphasising a word
+  * editing a document
+  * writing a letter
+  * preparing a legal case
 
-<img src='.\images\lec07Slide13-4.png' 
- style = '
-   border:0;
-   width:372.8239px;
-   height:auto;
-' >
- 
 <aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
 
-<img src='.\images\lec07Slide14-2.png' 
- style = '
-   border:0;
-   width:100%;
-   height:auto;
-' >
- 
-<aside class='notes'>
- 
 </aside>
  
 </textarea>
 </section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
-## Interview Example    
-  * Goal: To understand behaviours and roles for social robots in    Education
-  * Users: School Teachers 
-  * Method: Interview
-  * E.g. Interview questions include:
-  * How do you think a robot can contribute towards efficient language    learning? ?
-  * How do you want a robot to show different gestures during a one to one    interaction? ?
-  * How do you want a robot to display a personality according to a child? ?
-  * How do you want a robot to react to children emotions? ?
-  * What kind of role a robot should play to improve learning? ?
-  * How do you want a robot to store child's memory? ?
- 
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
 
-<img src='.\images\lec07Slide16-1.png' 
- style = '
-   border:0;
-   width:100%px;
-   height:auto;
-' >
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
 
-<img src='.\images\lec07Slide17-2.png' 
- style = '
-   border:0;
-   width:100%;
-   height:auto;
-' >
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
-### Field Trail Example 
- 
-<img src='.\images\lec07Slide18-3.png' 
- style = '
-   border:0;
-   width:300px;
-   height:auto;
-' >
-  * To check the applicability of Interactive Robots as    Social Partners and Peer tutors for Children in a    school
-  * Steps
-    * Deploy a robot in one of the rooms insides the    school, say a science laboratory
-    * A robot can gesture and speak English using a    vocabulary of 300 sentences and recognize 50 words
-    * Idea is to analyse the applicability of robots    through observing overall child-robot interaction
-  
-<img src='.\images\lec07Slide18-5.png' 
- style = '
-   border:0;
-   width:263.6551px;
-   height:auto;
-' >
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
-<img src='.\images\lec07Slide19-1.png' 
- style = '
-   border:0;
-   width:100%;
-   height:auto;
-' >
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
-## Analyzing Qualitative Data from the Focus  Group   
-  * Content Analysis
-  * In content analysis, qualitative remarks from the    participants are "coded" into predefined categories via    inferences made by independent human coders
-  * Setup your coding scheme
-  * Operationalize the variables
-  * Clearly define all categories
-  * Identify unit for coding 
-  * Normally: 2 independent coders coder and a check is made    for inter coder agreement (i.e. check for bias)   
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
 
-<img src='.\images\lec07Slide21-2.png' 
- style = '
-   border:0;
-   width:100%;
-   height:auto;
-' >
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
-## Focus Group Example  
-<img src='.\images\lec07Slide22-3.png' 
- style = '
-   border:0;
-   width:300px;
-   height:auto;
-' >
-  * Learning about children views' on social    robots in education
-  * Children discuss themes in groups of    three or four on the use of social robots    in education
-  * Themes include: 
-    * Robots as peers 
-    * Robots as tutors   
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
-## Other Example 
 
-<img src='.\images\lec07Slide23-2.png' 
- style = '
-   border:0;
-   width:100%;
-   height:auto;
-' >
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
-## Experimental Research   
-  * A test of the effect of a single variable by changing it    while keeping all other variables the same.
-  * A controlled experiment generally compares the results    obtained from an experimental sample against a    control sample. 
-  * General terms
-  * Participant (subject)
-  * Independent variables (test conditions)
-  * Dependent variables (what you measure)   
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
-## IV's and DV's   
-  * Independent Variables (IV): what you as the researcher vary or    manipulate
-  * Type of interface/app
-  * Type of feedback
-  * Type of Menu
-  * Dependent Variables (DV): What you measure
-  * Time
-  * Performance (Accuracy, Errors)
-  * Subjective Ratings   
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
-## Example of between subjects and within    subjects   
-  * A sports drink company wants to test two types of drinks (D1 and D2) and    their effect on racers
-  * If all participants try both drinks (within)
-  * If half of the participants try one drink only (between)
-  * We can also have a control group (D0 - water or no drink)
-  * We can also have a mixed design (the length of the race could be a second    IV and be between subjects, type of drink is within)   
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
 
-<img src='.\images\lec07Slide27-2.png' 
- style = '
-   border:0;
-   width:100%;
-   height:auto;
-' >
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
 <section data-markdown> 
 <textarea data-template>
-## Confound Variables   
-  * A variable that provides an alternative explanation to the results that we    see
-  * Clouds the effect of the IV
-  * So in the drinks example, a confound variable could be:
-  * Temperature at the time of the race
-  * Previous experience
-  * Age of racers   
- 
-<aside class='notes'>
- 
-</aside>
- 
-</textarea>
-</section>
- 
- 
- 
-<section data-markdown> 
-<textarea data-template>
+## Diagrammatic HTA
 
-<img src='.\images\lec07Slide29-2.png' 
- style = '
-   border:0;
-   width:100%;
-   height:auto;
-' >
- 
+<img src='./images/task3.png' />
+
 <aside class='notes'>
- 
+
 </aside>
  
 </textarea>
 </section>
- 
- 
- 
+
+
+
+
+
+
 <section data-markdown> 
 <textarea data-template>
-#### Guideline for Coursework 2 - a possible template  
- 
-* Evaluation Method (what is the method used and summarize the    setup)
-* Procedure: the sequence of steps from welcoming participant to the    participant leaving the experiment room, in other words: you provide    enough detail on the process of data collection to allow another person to    repeat your research.  How were groups formed, what instructions were  given to subjects, and so on 
-* Materials: Here you describe the equipment/instruments used for data    collection (computers, microphones, screens, tangible objects, etc).
-* Setup: where was the participant seated, how far from the screen, etc.
-* Measurements: details on data collection instruments (what is being    measured and how)
-* Participants: Here you need to identify the units you studied (what types    of users).  When the research units are humans, they are most often    referred to as "participants."    
- 
+## Refining the Description
+
+Given initial HTA (textual or diagram)
+
+**How to check / improve it?**
+
+---
+
+Some heuristics:
+* paired actions
+  - e.g., where is `turn on gas'
+* restructure
+  - e.g., generate task `make pot'
+* balance
+  - e.g., is `pour tea' simpler than making pot?
+* generalise
+  - e.g., make one cup ….. or more
+
 <aside class='notes'>
- 
+Given the initial task analysis there are methods for refining and improving the process.
+[pause]
+For example [pause]
+using paired actions.
+restructuring.
+balancing.
+generalization.
 </aside>
  
 </textarea>
 </section>
+
+
+
+<section data-markdown> 
+<textarea data-template>
+### Refined HTA for **making tea**
+
+<img src='./images/task4.png' width='65%'>
+
+<aside class='notes'>
+Take a moment to study the diagram for making tea. 
+[pause]
+Is this how you make tea?
+[pause][pause]
+</aside>
  
- 
- 
+</textarea>
+</section>
+
+
+
+
+
+
+<section>
+	<section data-markdown data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+		<textarea data-template>
+		## Activity
+		Think of an example (like making tea) of when you would use task analysis to breakdown a job.
+		
+		---
+		
+		**Write** some simple tasks you might used to accomplish this job
+
+<aside class='notes'> 
+Let's try a simple activity to get you thinking about task analysis [pause]
+Think of an example of when you would use task analysis to breakdown a job [pause]
+Once you've thought of a job, write down the steps you might used to accomplish this job
+[pause]
+Think about how you broke down the job and how you structured and prioritized each task.
+[pause][pause][pause] 
+</aside>
+
+
+		</textarea>
+	</section>
+	
+	<!--
+	<section data-markdown data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+		<textarea data-template>
+		## Answer
+		
+		Answer: **c) Constraints, Mapping, Principles, Affordance, Consistency, Feedback, Cultural Assumptions**
+<aside class='notes'> 
+       Did you guess right?
+	   The correct answer is c.[pause][pause] 
+</aside>
+		</textarea>
+	</section>
+	-->
+</section>
 
  
- 
-
 				
 <!--
 *****************
@@ -694,9 +478,13 @@ The evaluation approach influences the methods used, and in turn, how    data is
 	<textarea data-template>
 	## Summary
 	
-	* Understand Core Concepts (Task Analysis) 
-	* Structure and Terminology
-	* High and Low Level View
+	* **Understand** Core Concept behind Task Analysis
+	* Be able to **apply** task analysis to simple problems
+	* Use task analysis to breakdown complex tasks
+<aside class='notes'>
+At the end of this lecture you should now know what task analysis is and how to use it.
+[pause]
+</aside>
 	</textarea>
 </section>
 
@@ -708,16 +496,16 @@ The evaluation approach influences the methods used, and in turn, how    data is
 <img src='.\images\lec07Slide31-3.png' 
  style = '
    border:0;
-   width:400px;
+   width:300px;
    height:auto;
 ' >
   
-  Interaction Design - Beyond Human-   Computer Interaction <br>
-  Chapter 14
+Interaction Design - Beyond Human-   Computer Interaction <br>
+Chapter 14
 
  
 <aside class='notes'>
- 
+This week read Chapter 14 from the book on Interaction Design.
 </aside>
  
 </textarea>
@@ -733,7 +521,11 @@ The evaluation approach influences the methods used, and in turn, how    data is
 	* Work through labs/tutorial practicals 
 	* Experiment (get into good habits) 
 	* **Coursework** 
-
+<aside class='notes'>
+As usual [pause], continue to review the course material in addition to reading the recommended texts.
+[pause]
+Thank you.
+</aside>
 	</textarea>
 </section>
 				
@@ -798,11 +590,10 @@ Add some helper buttons to the bottom left
 	<a href="?print-pdf" onclick="window.open(this.href, 'print window', 'width=1000,height=550').print(); return false"><img src="./images/webprint.png" width="7.5%"></a>
 </div>
 
-<!--
 <div style="display: block; position: absolute; bottom: 3px; left: 95px; margin-left: 0px; z-index: 20; text-align: left;">
 	<a onclick="togglesound();"><img src="./images/webtalk.png" width="7.5%"></a>
 </div>
--->
+
 	
 
 </body>
