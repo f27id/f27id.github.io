@@ -812,15 +812,7 @@ http://www.justinmind.com/support/share-export-prototypes/
 
 function togglesound()
 {
-	tts.On = !tts.On;
-	if ( tts.On )
-	{
-		tts.Read();
-	}
-	else 
-	{
-		tts.Synth.cancel()
-	}	
+	tts.ToggleSpeech();	
 }
 
 		</script>

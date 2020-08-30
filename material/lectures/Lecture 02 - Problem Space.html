@@ -1141,14 +1141,8 @@ Chapter 2 + 3
       });
 
       function togglesound() {
-        tts.On = !tts.On;
-        if (tts.On) {
-          tts.Read();
-        } else {
-          tts.Synth.cancel();
-        }
-      }
-    </script>
+	tts.ToggleSpeech();	
+}
 
     <!--
 Add some helper buttons to the bottom left 

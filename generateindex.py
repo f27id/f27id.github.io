@@ -26,7 +26,8 @@ titles=["Introduction",
 		"Human AI Interaction",
 		"Revision" ];
 		
-videos = { "Introduction": "https://www.youtube.com/embed/wVtebjGk190?start=5&autoplay=1"
+videos = { "Introduction"       : "https://www.youtube.com/embed/wVtebjGk190?start=5&autoplay=1",
+           "Interaction Design" : "https://www.youtube.com/embed/MDRJLk-ojx4?start=5&autoplay=1"
 		 }
 
 
@@ -49,7 +50,9 @@ F27ID - <a href='https://www.macs.hw.ac.uk/students/cs/courses/f27id-introductio
 <td>Unit            </td>
 <td>Topic   		</td>
 <td>Lecture 		</td>
+<td>                </td>
 <td>Video 			</td>
+<td>                </td>
 <td>        		</td>
 <td>Notes   		</td>
 <td>Labs    		</td>
@@ -85,7 +88,11 @@ for i in range( 0, len(titles) + 1 ): # + 1 is due to week 6 skip
 	
 	no = unit
 	topic = titles[no]
-	unit += 1
+
+	
+	if ( topic == 'Interaction Design' ):
+		wkno = wkno - 1;
+	
 	filename = 'Lecture %02d - %s.html' % ( no, topic )
 	
 	
@@ -126,7 +133,9 @@ for i in range( 0, len(titles) + 1 ): # + 1 is due to week 6 skip
 	<td>%d      	</td>
 	<td>%s          </td>
 	<td>%s          </td>
+	<td>&nbsp</td>
 	<td>%s          </td>
+	<td>&nbsp</td>
 	<td>        	</td>
 	<td>%s          </td>
 	<td>%s    		</td>
@@ -134,6 +143,8 @@ for i in range( 0, len(titles) + 1 ): # + 1 is due to week 6 skip
 	</tr>
 	""" % (wkno, unit, topic, lectureurl, videourl, notesurl, labsurl, quizsurl  )
 
+	unit += 1
+		
 	txt += val
 	
 
