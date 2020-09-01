@@ -59,10 +59,12 @@
           </p>
 
           <aside class="notes">
-            Hello everyone! I hope you are doing well!
+            Hello everyone! We hope that you are all doing well!
           </aside>
         </section>
-
+        <section data-background-video="./images/introvideo.mp4">
+          <aside class="notes"></aside>
+        </section>
         <section data-markdown style="text-align: left">
           <textarea data-template>
 						## Overview
@@ -1084,10 +1086,10 @@ Chapter 2 + 3
 					* **Review** the revision questions 
 					* Work through labs/tutorial practicals 
 					* Experiment (get into good habits) 
-					* **Coursework 1** 
-          <aside class='notes'>
-            For this week, check the list here.
-          </aside>
+          * **Coursework 1** 
+          
+
+       
 					</textarea
           >
         </section>
@@ -1141,12 +1143,7 @@ Chapter 2 + 3
       });
 
       function togglesound() {
-        tts.On = !tts.On;
-        if (tts.On) {
-          tts.Read();
-        } else {
-          tts.Synth.cancel();
-        }
+        tts.ToggleSpeech();
       }
     </script>
 
