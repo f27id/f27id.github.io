@@ -1,0 +1,96 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="./assets/quiz.css">
+<script src="./prettyprint/run_prettify.js"></script>
+
+</head>
+<body>
+
+<h1>Revision Quiz</h1>
+
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+
+<script>
+  const myQuestions = [
+   {
+      question: "The problem space is about understanding and conceptualizing what is currently the user experience/product and how this is going to be improved or changed.",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "a"
+    },
+	{
+      question: "A conceptual model is a low level description of how a system is organized and operates.",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "What is a conceptual model of interaction?",
+      answers: {
+        a: "An abstraction that outlines what people can do with a product and what concepts are needed to understand how to interact with it",
+        b: "A low-cost prototype that is developed virtually",
+		b: "A 3-dimensional abstraction of the concept"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "A conceptual model is a description of the user interface",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "Interface metaphors make abstract concepts concrete and easier to understand",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "a"
+    }
+	,
+    {
+      question: "Interface metaphors may limit the designers' imagination in coming up with new conceptual models",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "a"
+    }
+	,
+    {
+      question: "Instructing is the best interaction type",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "b"
+    }
+  ];
+  
+</script>
+<script src="./assets/quiz.js"></script>
+
+<div class="hidden-mobile">
+    <div style="display: block; position: absolute; bottom: 5px; left: 5px; margin-left: 0px; z-index: 20; text-align: left;">
+        <a href="https://f27id.github.io" class="twitter-follow-button" data-show-count="false"><img src="../lectures/images/webhome.png" width="8%"></a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
