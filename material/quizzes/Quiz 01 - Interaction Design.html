@@ -1,0 +1,108 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="./assets/quiz.css">
+<script src="./prettyprint/run_prettify.js"></script>
+
+</head>
+<body>
+
+<h1>Revision Quiz</h1>
+
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+
+<script>
+  const myQuestions = [
+    {
+      question: "Interaction design is limited to human-computer interaction?",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "Interaction design is multidisciplinary?",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "Interaction design specialist: ",
+      answers: {
+        a: "Analyze and design interactive products",
+        b: "Research Design and Evaluation",
+		c: "Both"
+      },
+      correctAnswer: "c"
+    }
+	,
+    {
+      question: "Norman's Design consists of: Constraints, Mapping, Principles, Affiliation, Consistency, Feedback, Cultural Assumptions",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "b"
+    }
+	,
+    {
+      question: "Affordances is:",
+      answers: {
+        a: "A situation where an object's sensory characteristics intuitively imply its functionality and use",
+        b: "A user's ability to understand the functionality and use",
+		c: "Cost in relation to the products features"
+      },
+      correctAnswer: "a"
+    }
+	,
+    {
+      question: "Physical constraints refers to the predefined conventions shared by a cultural group",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "b"
+    }
+	,
+    {
+      question: "Logical constrains use reasoning to determine the alternatives",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "a"
+    }
+	,
+    {
+      question: "Cultural assumptions take into account the different design elements (e.g., colors and symbols) in different cultures",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "a"
+    }
+  ];
+  
+</script>
+<script src="./assets/quiz.js"></script>
+
+<div class="hidden-mobile">
+    <div style="display: block; position: absolute; bottom: 5px; left: 5px; margin-left: 0px; z-index: 20; text-align: left;">
+        <a href="https://f27id.github.io" class="twitter-follow-button" data-show-count="false"><img src="../lectures/images/webhome.png" width="8%"></a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
