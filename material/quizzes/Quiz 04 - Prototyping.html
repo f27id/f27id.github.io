@@ -1,0 +1,138 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="./assets/quiz.css">
+<script src="./prettyprint/run_prettify.js"></script>
+
+</head>
+<body>
+
+<h1>Revision Quiz</h1>
+
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+
+<script>
+  const myQuestions = [
+   {
+      question: "In interaction design, a prototype is a limited representation of the design for a device you are trying to build",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "a"
+    },
+	{
+      question: "A prototype allows users to interact with the device and explore the suitability of the design",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "a"
+    }
+	,
+	{
+      question: "In interaction design the prototype must be a physical representation",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "b"
+    }
+	,
+	{
+      question: "Prototypes are good for evaluating novel or innovative elements of a design",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "a"
+    }
+	,
+	{
+      question: "A low fidelity prototype is an expensive, detailed representation of the design",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "b"
+    }
+	,
+	{
+      question: "Sketching is important to low-fidelity prototyping",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "a"
+    }
+	,
+	{
+      question: "Storyboards:",
+      answers: {
+        a: "Series of sketches showing how a user might progress through a task using the device",
+        b: "Used early in design",
+		c: "Often used with scenarios, bringing more detail, and a chance to role play",
+		d: "All of the above"
+      },
+      correctAnswer: "a"
+    },
+	{
+      question: "The wizard-of-oz approach is when the user interacts with the computer, but a developer is responding to the input and providing the response, rather than the system",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "a"
+    },
+	{
+      question: "High-fidelity prototypes are done towards the end of a project and are details (provide a final look-and-feel)",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "a"
+    }
+	,
+	{
+      question: "Prototypes are mainly used by management to see the product before release",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "b"
+    }
+	,
+	{
+      question: "Two common types of prototype compromise",
+      answers: {
+        a: "horizontal and vertical",
+        b: "fast and slow",
+		c: "cost vs detail",
+		d: "funtionality and cost"
+      },
+      correctAnswer: "a"
+    }
+
+
+  ];
+  
+</script>
+<script src="./assets/quiz.js"></script>
+
+<div class="hidden-mobile">
+    <div style="display: block; position: absolute; bottom: 5px; left: 5px; margin-left: 0px; z-index: 20; text-align: left;">
+        <a href="https://f27id.github.io" class="twitter-follow-button" data-show-count="false"><img src="../lectures/images/webhome.png" width="8%"></a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
