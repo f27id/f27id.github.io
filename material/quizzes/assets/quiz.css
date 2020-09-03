@@ -10,7 +10,7 @@ body{
   font-weight: 300;
   //text-align: left;
    // background-color: #f8f6f0;
-  background: url("../lectures/images/back.png");
+  background: url("../../lectures/images/back.png");
 	background-position: right 0% bottom 25%;
 	background-repeat: no-repeat;
 	background-size: contain;	
