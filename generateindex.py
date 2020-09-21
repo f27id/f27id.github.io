@@ -25,9 +25,13 @@ titles=["Introduction",
 		"Design Thinking",
 		"Human AI Interaction",
 		"Revision" ];
+
 		
 videos = { "Introduction"       : "https://www.youtube.com/embed/wVtebjGk190?start=5&autoplay=1",
-           "Interaction Design" : "https://www.youtube.com/embed/MDRJLk-ojx4?start=5&autoplay=1"
+           "Interaction Design" : "https://www.youtube.com/embed/MDRJLk-ojx4?start=5&autoplay=1",
+		   "Problem Space"      : "https://www.youtube.com/embed/QNwFCXUhMg4?start=5&autoplay=1",
+		   "Literature Review"  : "https://www.youtube.com/embed/C5CfRFG9lWE?start=5&autoplay=1",
+		   "Prototyping"        : "https://www.youtube.com/embed/Ac8KdFEVljI?start=5&autoplay=1"
 		 }
 
 extra = {	"Literature Review" : ["https://www.youtube.com/watch?v=zIYC6zG265E",
