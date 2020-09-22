@@ -1,0 +1,121 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="./assets/quiz.css">
+<script src="./prettyprint/run_prettify.js"></script>
+
+</head>
+<body>
+
+<h1>Revision Quiz</h1>
+
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+
+<script>
+ const myQuestions = [
+   {
+      question: "Why should we think about usability?",
+      answers: {
+        a: "Because everybody is doing it",
+        b: "Increase productivity and customer satisfaction",
+                c: "To make the product beautiful",
+                d: "None of the above"
+      },
+      correctAnswer: "b"
+    },
+        {
+      question: "Usability Testing should be done after project design phase only",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "b"
+    }
+        ,
+        {
+      question: "Which of the following are the two best ways of prioritizing usability problems?",
+      answers: {
+        a: "First encountered and last encountered",
+        b: "Problem severity and problem length",
+		c: "Problem frequency and problem severity",
+		d: "Most confusing and least confusing"
+      },
+      correctAnswer: "c"
+    }
+        ,
+        {
+      question: "Red text should not be used on a blue background because:",
+      answers: {
+        a: "These are not browser safe colours",
+		b: "It has patriotic meaning for those in the U.S",
+		c: "It will be fuzzy to read",
+		d: "All of the above"
+      },
+      correctAnswer: "c"
+    }
+        ,
+        {
+      question: "The very best kind of 'Help' is:",
+      answers: {
+        a: "Online tutorials",
+		b: "Reference manuals",
+		c: "Help desk",
+		d: "Needing none at all "
+      },
+      correctAnswer: "d"
+    }
+        ,
+        {
+      question: "In the earliest stages of interface design, the best strategy for the use of colour is:",
+      answers: {
+        a: "Use  as many colours as possible",
+		b: "Avoid bright colours",
+		c: "Use no colours at all ",
+		d: "Avoid saturated red and blues"
+      },
+      correctAnswer: "c"
+    }
+        ,
+        {
+      question: "When should a developer apply usability principles?",
+      answers: {
+        a: "Early in the SDLC ",
+		b: "We dont need usability! ",
+		c: "After selling the product ",
+		d: "None of the above"
+      },
+      correctAnswer: "a"
+    }
+        ,
+        {
+      question: "You have to address a usability issue pertaining to a software interface. You will provide solutions after understanding:",
+      answers: {
+        a: "How your friends use the software?",
+		b: "How the developer uses the software?",
+		c: "How the users use the software?",
+		d: "How you use the software?"
+      },
+      correctAnswer: "c"
+    }
+];
+  
+</script>
+<script src="./assets/quiz.js"></script>
+
+<div class="hidden-mobile">
+    <div style="display: block; position: absolute; bottom: 5px; left: 5px; margin-left: 0px; z-index: 20; text-align: left;">
+        <a href="https://f27id.github.io" class="twitter-follow-button" data-show-count="false"><img src="../lectures/images/webhome.png" width="8%"></a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
