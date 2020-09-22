@@ -1,0 +1,80 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="./assets/quiz.css">
+<script src="./prettyprint/run_prettify.js"></script>
+
+</head>
+<body>
+
+<h1>Revision Quiz</h1>
+
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+
+<script>
+  const myQuestions = [
+   {
+      question: "You have to keep the end-user in mind while designing the product, as well as the requirements?",
+      answers: {
+        a: "true",
+        b: "false"
+      },
+      correctAnswer: "a"
+    }
+	,
+	{
+      question: "Which of the following is a non-functional requirement?",
+      answers: {
+        a: "The system enables users to place lunch orders",
+        b: "The system always responds to user clicks in less than one tenth of a second",
+		c: "The system displays a list of hotel vacancies",
+		d: "The system notifies the user when a new order arrives",
+		e: "None of the above"
+      },
+      correctAnswer: "b"
+    }
+	,
+	{
+      question: "Which question does non-functional requirements answer?",
+      answers: {
+        a: "What does the system do?",
+        b: "When does the system do it?",
+		c: "Where does the system do it?",
+		d: "Why does the system do it?",
+		e: "How well does the system do it?"
+      },
+      correctAnswer: "e"
+    }
+	,
+	{
+      question: "Which is the correct requirement type (e.g., 'functional). for a document editor that must be able to run continuously for one week without crashing?",
+      answers: {
+        a: "Usability",
+        b: "Performance",
+		c: "Reliability"
+      },
+      correctAnswer: "c"
+    }
+
+];
+  
+</script>
+<script src="./assets/quiz.js"></script>
+
+<div class="hidden-mobile">
+    <div style="display: block; position: absolute; bottom: 5px; left: 5px; margin-left: 0px; z-index: 20; text-align: left;">
+        <a href="https://f27id.github.io" class="twitter-follow-button" data-show-count="false"><img src="../lectures/images/webhome.png" width="8%"></a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
