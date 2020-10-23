@@ -36,9 +36,11 @@ videos = { "Introduction"       : "https://www.youtube.com/embed/wVtebjGk190?sta
 
 extra = {	"Literature Review" : ["https://www.youtube.com/watch?v=zIYC6zG265E",
                                    "https://www.youtube.com/watch?v=S3xo6ZjBV6U"],
-								             
-			"Prototyping Tools" : ["https://www.youtube.com/watch?time_continue=23&v=lYkC6qaRBe4",
-			                       "https://www.youtube.com/watch?v=W91-jzWg_vo"]
+								    	  
+			"Prototyping" : ["https://youtu.be/JMjozqJS44M"],
+							 
+			"Users and User Requirements" : ["https://www.youtube.com/watch?time_continue=23&v=lYkC6qaRBe4",
+											 "https://www.youtube.com/watch?v=W91-jzWg_vo"]
 		}
 
 txt = ""
