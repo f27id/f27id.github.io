@@ -1,0 +1,78 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="./assets/quiz.css">
+<script src="./prettyprint/run_prettify.js"></script>
+
+</head>
+<body>
+
+<h1>Revision Quiz</h1>
+
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+
+<script>
+ const myQuestions = [
+   {
+      question: "What does HTA stand for?",
+      answers: {
+        a: "High-Low Testing Activity",
+        b: "Hierarchical Testing Analysis",
+        c: "Hierarchical Task Analysis",
+        d: "Human Task Analysis"
+      },
+      correctAnswer: "c"
+    },
+	{
+      question: "What is the purpose of task analysis?",
+      answers: {
+        a: "To view what the users' goal is",
+        b: "To view what the users do to achieve their goal",
+        c: "To view users in action performing the task",
+        d: "All of the above"
+      },
+      correctAnswer: "d"
+    },
+	{
+      question: "Why was hierarchical task analysis introduced?",
+      answers: {
+        a: "To optimize the performances of computer systems",
+        b: "To decompose tasks",
+        c: "To evaluate an organization's training needs",
+        d: "To correct flaws in the design"
+      },
+      correctAnswer: "b"
+    },
+	,
+	{
+      question: "Task analysis focuses on all of the following except. Select one:",
+      answers: {
+        a: "The skills of the developers",
+        b: "Things people know",
+        c: "Peoples' goals and the actions they carry out",
+        d: "The things they act on"
+      },
+      correctAnswer: "a"
+    }
+];
+  
+</script>
+<script src="./assets/quiz.js"></script>
+
+<div class="hidden-mobile">
+    <div style="display: block; position: absolute; bottom: 5px; left: 5px; margin-left: 0px; z-index: 20; text-align: left;">
+        <a href="https://f27id.github.io" class="twitter-follow-button" data-show-count="false"><img src="../lectures/images/webhome.png" width="8%"></a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
