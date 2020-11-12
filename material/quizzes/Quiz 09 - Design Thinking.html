@@ -1,0 +1,82 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="./assets/quiz.css">
+<script src="./prettyprint/run_prettify.js"></script>
+
+</head>
+<body>
+
+<h1>Revision Quiz</h1>
+
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+
+<script>
+ const myQuestions = [
+   {
+      question: "How does writing a scenario help improve the user experience (UX) of a product?",
+      answers: {
+        a: "A scenario explains to users which goals they can achieve with your product.",
+        b: "If users have some issue with a product, they can describe their issues in a scenario to help the design improve the product.",
+		c: "Scenarios elucidate what a user may expect from a product and help define the problem space."
+      },
+      correctAnswer: "c"
+    },
+	{
+      question: "A conceptual solution is:",
+      answers: {
+        a: "A detailed representation of the product, including workflows and layout specifications.",
+        b: "A simple representation of the idea behind a product, identifying a problem and how your product may solve that problem.",
+        c: "A collection of images, materials, pieces of text, and so on, with the goal of evoking or projecting a particular style or concept.",
+        d: "A way to rephrase the problem, with the aim of making it harder to solve."
+      },
+      correctAnswer: "b"
+    }
+	,
+	{
+      question: "The best way to interact with a computer is through:",
+      answers: {
+        a: "10 out of 10 times it will be WIMP interfaces, because everyone knows how to use a mouse and a keyboard.",
+        b: "Touch screens, except when you have to use the product in water.",
+        c: "The same way you interact with people: gestures, facial expressions and speech!",
+        d: "None of the above, since there is no best interaction style. It depends on the problem space, usability aspects, accessibility, and so on."
+      },
+      correctAnswer: "d"
+    }
+	,
+	{
+      question: "How many literature reviews does an Interaction Design process comprise?",
+      answers: {
+        a: "Several, literature may for example help define the target users, define the problem space and set up requirements.",
+        b: "One, at the start, to collect information on the envisioned users and use-case.",
+        c: "Two, once to determine the user characteristics and another to determine the requirements.",
+        d: "One, once the functional requirements are clarified and the design thinking process is complete."
+      },
+      correctAnswer: "a"
+    }
+];
+  
+  
+
+
+
+</script>
+<script src="./assets/quiz.js"></script>
+
+<div class="hidden-mobile">
+    <div style="display: block; position: absolute; bottom: 5px; left: 5px; margin-left: 0px; z-index: 20; text-align: left;">
+        <a href="https://f27id.github.io" class="twitter-follow-button" data-show-count="false"><img src="../lectures/images/webhome.png" width="8%"></a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
