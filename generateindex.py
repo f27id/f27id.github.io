@@ -40,7 +40,9 @@ extra = {	"Literature Review" : ["https://www.youtube.com/watch?v=zIYC6zG265E",
 			"Prototyping" : ["https://youtu.be/JMjozqJS44M"],
 							 
 			"Users and User Requirements" : ["https://www.youtube.com/watch?time_continue=23&v=lYkC6qaRBe4",
-											 "https://www.youtube.com/watch?v=W91-jzWg_vo"]
+											 "https://www.youtube.com/watch?v=W91-jzWg_vo"],
+											 
+			"Revision" : ['./material/lectures/Lecture%2012%20-%20Revision.html' ]
 		}
 
 txt = ""
