@@ -16,7 +16,7 @@ Example:
 titles=["Introduction",
 		'Interaction Design',
         "Problem Space",
-		"Literature Review",
+		"Design Documentation",
 		"Prototyping",
 		"Users and User Requirements",
 		"Task Analysis",
@@ -27,18 +27,7 @@ titles=["Introduction",
 		"Revision" ];
 
 		
-videos = { "Introduction"       : "https://www.youtube.com/embed/wVtebjGk190?start=5&autoplay=1",
-           "Interaction Design" : "https://www.youtube.com/embed/MDRJLk-ojx4?start=5&autoplay=1",
-		   "Problem Space"      : "https://www.youtube.com/embed/QNwFCXUhMg4?start=5&autoplay=1",
-		   "Literature Review"  : "https://www.youtube.com/embed/C5CfRFG9lWE?start=5&autoplay=1",
-		   "Prototyping"        : "https://www.youtube.com/embed/Ac8KdFEVljI?start=5&autoplay=1"
-		 }
-
-extra = {	"Literature Review" : ["https://www.youtube.com/watch?v=zIYC6zG265E",
-                                   "https://www.youtube.com/watch?v=S3xo6ZjBV6U"],
-								    	  
-			"Prototyping" : ["https://youtu.be/JMjozqJS44M"],
-							 
+extra = {					 
 			"Users and User Requirements" : ["https://www.youtube.com/watch?time_continue=23&v=lYkC6qaRBe4",
 											 "https://www.youtube.com/watch?v=W91-jzWg_vo"],
 											 
@@ -65,7 +54,6 @@ F27ID - <a href='https://www.macs.hw.ac.uk/students/cs/courses/f27id-introductio
 <td>Topic   		</td>
 <td>Lecture 		</td>
 <td>                </td>
-<td>Video 			</td>
 <td>Extra           </td>
 <td>                </td>
 <td>        		</td>
@@ -117,10 +105,6 @@ for i in range( 0, len(titles) + 1 ): # + 1 is due to week 6 skip
 	if ( FileExist( lecturefilename ) ):
 		lectureurl = "<a href='" + lecturefilename + "'> Slides </a>"
 	
-	videourl = "-"
-	if ( topic in videos ):
-		videourl = "<a href='" + videos[ topic ] + "'>Video</a>"
-	
 	extraurl = "-"
 	if ( topic in extra ):
 		extraurl = ''
@@ -157,14 +141,13 @@ for i in range( 0, len(titles) + 1 ): # + 1 is due to week 6 skip
 	<td>%s          </td>
 	<td>&nbsp</td>
 	<td>%s          </td>
-	<td>%s          </td>
 	<td>&nbsp</td>
 	<td>        	</td>
 	<td>%s          </td>
 	<td>%s    		</td>
 	<td>%s     		</td>
 	</tr>
-	""" % (wkno, unit, topic, lectureurl, videourl, extraurl, notesurl, labsurl, quizsurl  )
+	""" % (wkno, unit, topic, lectureurl, extraurl, notesurl, labsurl, quizsurl  )
 
 	unit += 1
 		
