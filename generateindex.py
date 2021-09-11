@@ -27,7 +27,9 @@ titles=["Introduction",
 		"Revision" ];
 
 		
-extra = {					 
+extra = {			
+            "Introduction": ['./material/extra/designs.html'],
+			
 			"Prototyping" : ["https://www.youtube.com/watch?v=Cx2dkpBxst8",
 			                 "https://www.youtube.com/channel/UCQsVmhSa4X-G3lHlUtejzLA"],
 											 
