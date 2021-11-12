@@ -34,6 +34,8 @@ extra = {
 			                 "https://www.youtube.com/channel/UCQsVmhSa4X-G3lHlUtejzLA"],
 
 			"Task Analysis": ['./material/extra/task.html'],
+			
+			"Testing and Evaluation": ['./material/extra/testing.html'],
 					
 			"Revision" : ['./material/lectures/Lecture%2012%20-%20Revision.html' ]
 		}
