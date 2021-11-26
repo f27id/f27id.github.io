@@ -38,6 +38,8 @@ extra = {
 			"Testing and Evaluation": ['./material/extra/testing.html'],
 			
 			"Design Thinking": ['./material/extra/thinking.html'],
+			
+			"Human AI Interaction": ['./material/extra/humanai.html'],
 					
 			"Revision" : ['./material/lectures/Lecture%2012%20-%20Revision.html' ]
 		}
