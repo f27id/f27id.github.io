@@ -13,10 +13,17 @@ body:after {
     display: inline-block;
 }
 
+html {
+    width: 100vw !important;
+    height: 100vh !important;
+	overflow: hidden !important;
+}
+
 body {
     content: "";
-    width: 100%;
-    height: 100%;
+    width: 100vw !important;
+    height: 100vh !important;
+	overflow: hidden !important;
     background: url("../images/back.png");
 	background-position: right 0% bottom 45%;
 	background-repeat: no-repeat;
@@ -25,8 +32,27 @@ body {
     right: 0px;
     position: absolute;
     display: inline-block;
+	
 }
 
+.controls {
+    position:fixed !important;
+}
+
+.reveal{
+    width: 100vw !important;
+    height: 100vh !important;
+	overflow: hidden !important;
+	position:fixed !important;
+}
+
+.progress {
+	position:fixed !important;
+}
+
+.progress:after {
+    position:fixed !important;
+}
 
 html.dimbg .slide-background {
 	opacity: 0.2 !important;
