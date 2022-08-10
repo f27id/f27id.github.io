@@ -76,7 +76,7 @@ Interactive Design
 <aside class='notes'>
 Today's lecture we'll talk about what is interactive design [pause]
 We will then talk about approaches that are used to assess an interface (and quantify its effectiveness).
-For example, using Norman's Design principles.
+For example, Norman's Design principles.
 We will then work through a number of examples and conclude with some discussions on the topic.
 </aside>
 				</section>
@@ -404,37 +404,59 @@ Good designs must take a user focus not system focus<br>
 </textarea>
 </section>
  
+
+<section data-markdown> 
+<textarea data-template>
+## **Norman's** Design Principles
+
+Norman's main idea is that devices, things, computers, and interfaces should be **functional, easy to use, and intuitive.** His idea is that there are two gulfs to avoid: the gulf of execution and the gulf of evaluation
+ 
+> Books: The Design of Everyday Things, ISBN: 978-0465050659
+<aside class='notes'> 
+
+</aside>
+</textarea>
+</section>
+
+
  
  
 <section data-markdown> 
 <textarea data-template>
 # **Norman's** Design Principles
-* Affordance
-* Constraints
-* Mapping
-* Consistency
-* Feedback
-* Cultural Assumptions
+
+
+* Visibility - can I see it?
+* Feedback - what is it doing now?
+* Affordance - how do I use it?
+* Mapping - where am I and where can I go?
+* Constraint - why can't I do that?
+* Consistency - I think I have seen this before?
+
+
  
 <aside class='notes'> 
   A popular design approach for improving the chances of a successful solution is Norman's Design Principles.
   Donald Norman's design principles is made up of six areas.
-  These are Affordance, Constraints, Mapping, Consistency, Feedback and Cultural Assumption.[pause]
+  These are visibility, feedback, affordance, mapping, constraints and consistency.[pause]
+  Further reading: 
+  * https://www.enginess.io/insights/6-principles-design-la-donald-norman
+  * https://www.educative.io/answers/what-are-normans-design-principles
 </aside>
 </textarea>
 </section>
 
  
 <section>
-	<section data-markdown data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+	<section data-markdown data-transition="slide" data-background="#15533c" data-background-transition="zoom">
 		<textarea data-template>
 		## Revision Question
 		Which of the following are Norman's Designs? 
 		
 		
-		* a) Constraints, Mapping, Style, Feedback, Cultural Assumptions, Affordance
-		* b) Affordance, Errors, Mapping, Consistency, Feedback, Cultural Assumptions
-		* c) Constraints, Mapping, Affordance, Consistency, Feedback, Cultural Assumptions
+		* a) Constraints, Mapping, Style, Feedback, Classification, Affordance
+		* b) Affordance, Errors, Mapping, Consistency, Feedback, Constraints
+		* c) Constraints, Consistency, Visibility, Feedback, Affordance, Mapping
 		* d) none of the above
     
 <aside class='notes'> 
@@ -446,11 +468,11 @@ Good designs must take a user focus not system focus<br>
 		</textarea>
 	</section>
 	
-	<section data-markdown data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+	<section data-markdown data-transition="slide" data-background="#15533c" data-background-transition="zoom">
 		<textarea data-template>
 		## Answer
 		
-		Answer: **c) Constraints, Mapping, Affordance, Consistency, Feedback, Cultural Assumptions**
+		Answer: **c) Constraints, Consistency, Visibility, Feedback, Affordance, Mapping**
 <aside class='notes'> 
        Did you guess right?
 	   The correct answer is c.[pause][pause] 
@@ -458,11 +480,66 @@ Good designs must take a user focus not system focus<br>
 		</textarea>
 	</section>
 </section>
-				
- 
+	
+
 <section data-markdown> 
 <textarea data-template>
-# Affordances
+## Visibility
+  * Can **see** the state of the device and possible actions 
+  * For example (see image below), car controls are positioned in a way that they can be easily found and used 
+  
+<img src='./images/nvisibility.jpg' width='700px'/>
+  
+ 
+<aside class='notes'>
+  What is visibility? [pause]
+</aside>
+ 
+</textarea>
+</section>	
+
+<section data-markdown> 
+<textarea data-template>
+## Feedback
+  * Provide users with information about
+    - The result of an action
+    - Whether an **action** has been **executed**
+    - The current state and which operations are possible
+  * Rule of thumb: 0.01s, 0.1s, 1s, 10s
+  * Use sound, highlighted, animation, ...
+  
+<img src='.\images\lec01Slide23-3.png' 
+ style = '
+   border:0;
+   width:500px;
+' >
+<img src='.\images\lec01Slide23-4.png' 
+ style = '
+   border:0;
+   width:500px;
+' >
+<!--
+<img src='.\images\rule_of_thumb.png' 
+style = '
+  border:0;
+  width:400px;
+' >
+ -->
+ 
+<aside class='notes'>
+  What is feedback? [pause]
+  Feedback involves sending back information about what action has been done and what has been accomplished.
+  It provides the user with the information about the success or failure and what to do next.[pause]
+  Use highlighted text, sound, animation for feedback. Read Donald Norman's rule of thumb for the useable duration of animation.
+</aside>
+ 
+</textarea>
+</section>
+
+
+<section data-markdown> 
+<textarea data-template>
+## Affordance
   
   " A situation where an object's sensory characteristics **intuitively imply** its functionality and use
   
@@ -470,8 +547,8 @@ Good designs must take a user focus not system focus<br>
  style = '
    border:0;
    text-align: center;
-   width:430.057px;
-   height:439.1998px;
+   width:600px;
+   box-shadow: none;
 ' >
  
 <aside class='notes'>
@@ -489,21 +566,21 @@ Good designs must take a user focus not system focus<br>
  
 <section data-markdown> 
 <textarea data-template>
-# Visual Affordances
-  * Software interfaces are virtual and don't have a physical affordance
+## Visual Affordances
+  * Software interfaces are virtual and don't have a **physical affordance**
   * Rather **perceived affordance**
   
 <img src='.\images\lec01Slide18-3.png' 
  style = '
    border:0;
-   width:230px;
-   height:351px;
+   width:400px;
+   box-shadow: none;
 ' >
 <img src='.\images\lec01Slide18-4.png' 
  style = '
    border:0;
-   width:640px;
-   height:139px;
+   width:500px;
+   box-shadow: none;
 ' >
  
 <aside class='notes'>
@@ -518,18 +595,42 @@ handle affords grasping, and a mouse button affords pushing.
 </section>
  
  
+<section data-markdown> 
+<textarea data-template>
+## Mapping
+  * Describes the **relationship** between control elements and their effects in the world
+  * Different types
+    - Cultural and Physical
+  * **Examples**: Volume, brightness, lift, buttons, ...
+  
+<img src='.\images\nmapping.jpg' 
+ style = '
+   border:0;
+   box-shadow: none;
+   width:800px;
+' >
+<br>
+ 
+<aside class='notes'>
+  What is Mapping? [pause]
+  Mapping is about having a clear relationship between controls and the effect they have on the world. 
+  You want this mapping to feel as natural as possible. 
+  For examples the mapping of a volume, buttons or scroll bars.
+</aside>
+ 
+</textarea>
+</section>
  
 <section data-markdown> 
 <textarea data-template>
-# Constraints
+## Constraints
   * Reduce the number of possible actions
-  * Avoid selection of invalid options
+  * Avoid selection of **invalid options**
   
 <img src='.\images\lec01Slide19-3.png' 
  style = '
    border:0;
-   width:503.2272px;
-   height:300.7273px;
+   width:800px;
 ' >
  
 <aside class='notes'>
@@ -571,38 +672,13 @@ handle affords grasping, and a mouse button affords pushing.
 </section>
  
  
- 
-<section data-markdown> 
-<textarea data-template>
-## Mapping
-  * Describes the **relationship** between control elements and their effects in the world
-  * Different types
-    - Cultural and Physical
-  * **Examples**: Volume, brightness, lift, buttons, ...
-  
-<img src='.\images\lec01Slide21-3.png' 
- style = '
-   border:0;
-   width:450px;
-   height:auto;
-' >
-<br>
- 
-<aside class='notes'>
-  What is Mapping? [pause]
-  Mapping is about having a clear relationship between controls and the effect they have on the world. 
-  You want this mapping to feel as natural as possible. 
-  For examples the mapping of a volume, buttons or scroll bars.
-</aside>
- 
-</textarea>
-</section>
+
  
  
  
 <section data-markdown> 
 <textarea data-template>
-# Consistency
+## Consistency
   * Use **similar** operations and elements for similar tasks
     - Examples: short-cuts, control key plus first letter of command - Ctrl+O, Ctrl+S, Ctrl+C
   * Advantage: **Consistent interfaces** are easier to learn and use
@@ -610,8 +686,8 @@ handle affords grasping, and a mouse button affords pushing.
 <img src='.\images\lec01Slide22-3.png' 
  style = '
    border:0;
-   width:auto;
-   height:auto;
+   width:800px;
+   box-shadow: none;
 ' >
  
 <aside class='notes'>
@@ -625,49 +701,24 @@ handle affords grasping, and a mouse button affords pushing.
  
  
  
-<section data-markdown> 
-<textarea data-template>
-## Feedback
-  * Provide users with information about
-    - The result of an action
-    - Whether an **action** has been **executed**
-    - The current state and which operations are possible
-  * Rule of thumb: 0.01s, 0.1s, 1s, 10s
-  * Use sound, highlighted, animation, ...
-  
-<img src='.\images\lec01Slide23-3.png' 
- style = '
-   border:0;
-   width:308.8485px;
-   height:auto;
-' >
-<img src='.\images\lec01Slide23-4.png' 
- style = '
-   border:0;
-   width:349px;
-   height:auto;
-' ><img src='.\images\rule_of_thumb.png' 
-style = '
-  border:0;
-  width:308.8485px;
-  height:auto;
-' >
- 
-<aside class='notes'>
-  What is feedback? [pause]
-  Feedback involves sending back information about what action has been done and what has been accomplished.
-  It provides the user with the information about the success or failure and what to do next.[pause]
-  Use highlighted text, sound, animation for feedback. Read Donald Norman's rule of thumb for the useable duration of animation.
+
+<section data-markdown data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+	<textarea data-template>
+	## Revision Question
+	Can you think of 2 **products, software or interface-system** you have used, use or experienced that violates any of the mentioned Norman's design principles?
+
+<aside class='notes'> 
+   Think about a software that you have used, that violates Norman design principles. We will discuss this in the live session. [pause][pause] 
 </aside>
+
+	</textarea>
+</section> 
  
-</textarea>
-</section>
  
- 
- 
+
 <section data-markdown> 
 <textarea data-template>
-# Cultural Assumption
+## Cultural Design Aspect
   * Colors, symbols etc have different **meaning** in different cultures
   * Examples:
     - Meaning of color red 
@@ -689,20 +740,10 @@ style = '
  
 </textarea>
 </section>
- 
+
  
 
-	<section data-markdown data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-		<textarea data-template>
-		## Revision Question
-		Can you think of 2 **products, software or interface-system** you have used, use or experienced that violates any of the mentioned Norman's design principles?
-    
-<aside class='notes'> 
-       Think about a software that you have used, that violates Norman design principles. We will discuss this in the live session. [pause][pause] 
-</aside>
 
-		</textarea>
-	</section>
 	
  
  
